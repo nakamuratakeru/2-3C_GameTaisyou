@@ -98,7 +98,7 @@ public class Menu : MonoBehaviour
         bool Startkettei = Input.GetKeyDown("joystick button 0");
         if (Startkettei == true)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
