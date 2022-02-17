@@ -11,6 +11,7 @@ public class NotesRod : MonoBehaviour
 
     GameObject notes;
     bool ynotes=false;
+    bool niceflg = false;
     float x_val;
     public float speed;
 
@@ -52,6 +53,7 @@ public class NotesRod : MonoBehaviour
             Y.GetComponent<Renderer>().material.color = Color.red;
             if (ynotes == true)
             {
+                ynotes = false;
                 notes.SetActive(false);
             }
         }
@@ -66,11 +68,19 @@ public class NotesRod : MonoBehaviour
     {
         
 
+
         if (other.gameObject.CompareTag("notes"))
         {
             notes = other.gameObject;
             ynotes = true;
             Debug.Log("atari");
+        }
+
+        if (other.gameObject.CompareTag("nice"))
+        {
+            Debug.Log("nice");
+            niceflg = true;
+            //perfect(red)  good(green) nice(bule) miss(white)
         }
     }
 }
