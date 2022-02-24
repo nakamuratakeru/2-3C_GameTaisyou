@@ -32,17 +32,17 @@ public class NotesRod : MonoBehaviour
     void Update()
     {
 
-        x_val = Input.GetAxis("Horizontal");
+        //x_val = Input.GetAxis("Horizontal");
 
-        if (x_val > 0)
-        {
-            transform.position = new Vector2(transform.position.x + speed, transform.position.y);
-        }
+        //if (x_val > 0)
+        //{
+        //    transform.position = new Vector2(transform.position.x + speed, transform.position.y);
+        //}
 
-        if (x_val < 0)
-        {
-            transform.position = new Vector2(transform.position.x - speed , transform.position.y);
-        }
+        //if (x_val < 0)
+        //{
+        //    transform.position = new Vector2(transform.position.x - speed , transform.position.y);
+        //}
 
         Y = GameObject.Find("/NotesRod/Y");
         X = GameObject.Find("/NotesRod/Y");
