@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1123679394641156347}
   - component: {fileID: 1123679394641156344}
   - component: {fileID: 1123679394641156346}
+  - component: {fileID: 1559932590071577748}
   m_Layer: 0
   m_Name: Ynotes
   m_TagString: notes
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123679394641156345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92, y: 1.97, z: 0}
+  m_LocalPosition: {x: 1.92, y: 1.97, z: 10.87}
   m_LocalScale: {x: 1.02, y: 1, z: 1}
   m_Children:
   - {fileID: 1123679395577350143}
@@ -109,6 +110,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1.51}
   m_EdgeRadius: 0
+--- !u!114 &1559932590071577748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123679394641156345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5353ad7d1af5dc044b50c85c0c1a3d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1123679395577350140
 GameObject:
   m_ObjectHideFlags: 0
