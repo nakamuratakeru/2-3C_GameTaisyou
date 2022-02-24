@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-   
-    [SerializeField] private float speed;
+    [SerializeField]
+    float scrollSpeed = -1;
 
-    void Update()
+    Vector3 cameraRectmin;
+
+    private void Start()
     {
-        transform.position -= new Vector3(Time.deltaTime * speed, 0);
-        if (transform.position.x <= -5.5f)
+        cameraRectmin = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.z));
+
+    }
+
+    private void Update()
+    {
+        Move();
+    }
+
+    void Move()
+    {
+        transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
+
+        if (transform.position.x < (cameraRectmin.x - Camera.main.transform.position.x) * 2)
         {
-            transform.position = new Vector3(5.5f, 0);
+            transform.position = new Vector2((Camera.main.transform.position.x - cameraRectmin.x) * 2, transform.position.y);
         }
     }
+
+   
 }

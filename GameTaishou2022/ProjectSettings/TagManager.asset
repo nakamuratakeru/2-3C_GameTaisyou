@@ -7,6 +7,7 @@ TagManager:
   - Ynotes
   - notes
   - Restart
+  - nice
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - 1
   - 
   - 
   - 
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: background
     uniqueID: 4248857903
+    locked: 0
+  - name: player
+    uniqueID: 3051514893
     locked: 0
