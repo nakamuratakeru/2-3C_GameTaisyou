@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         // 追加した変数に値をセット
         Distance = Math.Abs(BeatPoint.position.x - SpawnPoint.position.x);
-        During = 2 * 1000;
+        During = 4 * 1000;
         isPlaying = false;
         GoIndex = 0;
 
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
     {
         PlayTime = Time.time * 1000;
         isPlaying = true;
-        if(isPlaying = true){
+        if (isPlaying = true) {
             AudioSource.PlayClipAtPoint(explosionSE, transform.position);
         }
         Debug.Log("Game Start!");
