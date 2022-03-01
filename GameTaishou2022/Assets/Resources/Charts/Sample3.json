@@ -1,0 +1,16 @@
+{
+  "title": "sample",
+  "bpm": "120",
+  "notes": [
+    {"timing": "2060", "type": "don"},
+    {"timing": "2340", "type": "ka"},
+    {"timing": "2590", "type": "ka"},
+    {"timing": "3030", "type": "don"},
+    {"timing": "4000", "type": "don"},
+    {"timing": "4060", "type": "don"},
+    {"timing": "4380", "type": "don"},
+    {"timing": "4820", "type": "don"},
+    {"timing": "5190", "type": "don"},
+    {"timing": "5900", "type": "ka"}
+  ]
+}
