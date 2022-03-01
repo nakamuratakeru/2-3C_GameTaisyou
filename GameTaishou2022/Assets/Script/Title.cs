@@ -16,8 +16,11 @@ public class Title : MonoBehaviour
     {
         if (Input.GetKeyDown("joystick button 1"))
         {
-            Application.Quit();
-
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+        UnityEngine.Application.Quit();
+#endif
         }
         bool Startkettei = Input.GetKeyDown("joystick button 0");
         if (Startkettei == true)
