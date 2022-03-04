@@ -2,15 +2,50 @@
   "title": "sample",
   "bpm": "120",
   "notes": [
-    {"timing": "2160", "type": "don"},
-    {"timing": "2440", "type": "ka"},
-    {"timing": "2740", "type": "ka"},
-    {"timing": "3030", "type": "don"},
-    {"timing": "3330", "type": "don"},
-    {"timing": "3610", "type": "don"},
-    {"timing": "3900", "type": "don"},
-    {"timing": "4190", "type": "don"},
-    {"timing": "4480", "type": "don"},
-    {"timing": "4770", "type": "ka"}
+    {
+      "timing": "2160",
+      "type": "X"
+    },
+    {
+      "timing": "2440",
+      "type": "Y"
+    },
+    {
+      "timing": "2740",
+      "type": "B"
+    },
+    {
+      "timing": "3030",
+      "type": "A"
+    },
+    {
+      "timing": "3330",
+      "type": "Y"
+    },
+    {
+      "timing": "3610",
+      "type": "Y"
+    },
+    {
+      "timing": "3900",
+      "type": "B"
+    },
+    {
+      "timing": "4190",
+      "type": "X"
+    },
+    {
+      "timing": "4480",
+      "type": "Y"
+    },
+    {
+      "timing": "4770",
+      "type": "Y"
+    },
+    {
+      "timing": "6020",
+      "type": "Y"
+    }
+
   ]
 }

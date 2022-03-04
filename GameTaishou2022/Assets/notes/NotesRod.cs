@@ -32,18 +32,6 @@ public class NotesRod : MonoBehaviour
     void Update()
     {
 
-        //x_val = Input.GetAxis("Horizontal");
-
-        //if (x_val > 0)
-        //{
-        //    transform.position = new Vector2(transform.position.x + speed, transform.position.y);
-        //}
-
-        //if (x_val < 0)
-        //{
-        //    transform.position = new Vector2(transform.position.x - speed , transform.position.y);
-        //}
-
         Y = GameObject.Find("/NotesRod/Y");
         X = GameObject.Find("/NotesRod/Y");
         B = GameObject.Find("/NotesRod/Y");
@@ -55,6 +43,7 @@ public class NotesRod : MonoBehaviour
             {
                 ynotes = false;
                 notes.SetActive(false);
+                Destroy(notes.gameObject.transform.root.gameObject);
             }
         }
         else if(Input.GetButtonUp("joystick button 3"))
@@ -67,8 +56,6 @@ public class NotesRod : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         
-
-
         if (other.gameObject.CompareTag("notes"))
         {
             notes = other.gameObject;
