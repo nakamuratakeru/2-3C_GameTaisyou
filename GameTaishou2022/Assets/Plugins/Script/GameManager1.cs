@@ -32,6 +32,7 @@ public class GameManager1 : MonoBehaviour
     bool isPlaying;
     int GoIndex;
     public AudioClip explosionSE;
+    int mstop = 0; //mstopの数値が１以上になるとplayボタンを押しても音楽が流れなくなる。
 
 
     string Title;
@@ -112,9 +113,11 @@ public class GameManager1 : MonoBehaviour
     {
         PlayTime = Time.time * 1000;
         isPlaying = true;
-        if (isPlaying = true) {
+        if (isPlaying = true && mstop < 1) {
             AudioSource.PlayClipAtPoint(explosionSE, transform.position);
+            mstop += 1;
+            Debug.Log("Game Start!");
         }
-        Debug.Log("Game Start!");
+        //Debug.Log("Game Start!");
     }
 }
