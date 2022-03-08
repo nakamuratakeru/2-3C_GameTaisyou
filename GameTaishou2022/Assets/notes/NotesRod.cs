@@ -33,9 +33,9 @@ public class NotesRod : MonoBehaviour
     {
 
         Y = GameObject.Find("/NotesRod/Y");
-        X = GameObject.Find("/NotesRod/Y");
-        B = GameObject.Find("/NotesRod/Y");
-        A = GameObject.Find("/NotesRod/Y");
+        X = GameObject.Find("/NotesRod/X");
+        B = GameObject.Find("/NotesRod/B");
+        A = GameObject.Find("/NotesRod/A");
 
         if (Input.GetButtonDown("joystick button 3")){
             Y.GetComponent<Renderer>().material.color = Color.red;
@@ -50,6 +50,53 @@ public class NotesRod : MonoBehaviour
         {
             Y.GetComponent<Renderer>().material.color = Color.blue;
         }
+
+        if (Input.GetButtonDown("joystick button 2"))
+        {
+            X.GetComponent<Renderer>().material.color = Color.red;
+            if (ynotes == true)
+            {
+                ynotes = false;
+                notes.SetActive(false);
+                Destroy(notes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Input.GetButtonUp("joystick button 2"))
+        {
+            X.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+        if (Input.GetButtonDown("joystick button 1"))
+        {
+            B.GetComponent<Renderer>().material.color = Color.red;
+            if (ynotes == true)
+            {
+                ynotes = false;
+                notes.SetActive(false);
+                Destroy(notes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Input.GetButtonUp("joystick button 1"))
+        {
+            B.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+        if (Input.GetButtonDown("joystick button 0"))
+        {
+            A.GetComponent<Renderer>().material.color = Color.red;
+            if (ynotes == true)
+            {
+                ynotes = false;
+                notes.SetActive(false);
+                Destroy(notes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Input.GetButtonUp("joystick button 0"))
+        {
+            A.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+
 
     }
 

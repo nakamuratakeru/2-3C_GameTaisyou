@@ -2010,8 +2010,8 @@ MonoBehaviour:
   Play: {fileID: 74798923}
   SetChart: {fileID: 47885515}
   Ynotes: {fileID: 3570611795717170429, guid: a76301bdede5931459ab5e2ee4af381d, type: 3}
-  Xnotes: {fileID: 7767386794424106918, guid: 724cf03c10aa1da4ba11ac1965b02d01, type: 3}
-  Bnotes: {fileID: 6246240840435935273, guid: f734be40883720d4caa4b4b33f95ea7d, type: 3}
+  Xnotes: {fileID: 595317359071168206, guid: 19ecf93a66bdb6342830229e01f2b48d, type: 3}
+  Bnotes: {fileID: 6078886027829899810, guid: aef7a88439bb93d419a7728315b00b10, type: 3}
   Anotes: {fileID: 6224916249700681019, guid: ab44030266bc82d41a905e2ff9ad766b, type: 3}
   YSpawnPoint: {fileID: 541382455}
   XSpawnPoint: {fileID: 2002467715}
