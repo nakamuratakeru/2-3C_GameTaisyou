@@ -8,6 +8,9 @@ TagManager:
   - notes
   - Restart
   - nice
+  - Xnotes
+  - Bnotes
+  - Anotes
   layers:
   - Default
   - TransparentFX
