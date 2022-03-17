@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3545134205673842118}
   - component: {fileID: 1648757039826275694}
   - component: {fileID: 5221140194300847291}
+  - component: {fileID: 4056384533529845329}
   m_Layer: 0
   m_Name: hoyoko_0 1
   m_TagString: Untagged
@@ -123,6 +124,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5353ad7d1af5dc044b50c85c0c1a3d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4056384533529845329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554154281809826823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf0fecabe2cbde41a13dbb38e1efa86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoint: 1
 --- !u!1001 &2479717480126454564
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7787623826454357822}
   - component: {fileID: 8403356708055152399}
   - component: {fileID: 1772413223920876958}
+  - component: {fileID: 5841033343339783632}
   m_Layer: 0
   m_Name: hone_atari 1
   m_TagString: Untagged
@@ -143,6 +144,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5841033343339783632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157580410370104738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf0fecabe2cbde41a13dbb38e1efa86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoint: 1
 --- !u!1001 &2355229497960694163
 PrefabInstance:
   m_ObjectHideFlags: 0
