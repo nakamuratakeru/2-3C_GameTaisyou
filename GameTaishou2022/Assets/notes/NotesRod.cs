@@ -40,6 +40,9 @@ public class NotesRod : MonoBehaviour
     void Update()
     {
 
+        float Xyoko = Input.GetAxisRaw("LT");
+        float Xtate = Input.GetAxisRaw("RT");
+
         Y = GameObject.Find("/NotesRod/Y");
         X = GameObject.Find("/NotesRod/X");
         B = GameObject.Find("/NotesRod/B");
@@ -59,6 +62,22 @@ public class NotesRod : MonoBehaviour
             Y.GetComponent<Renderer>().material.color = Color.blue;
         }
 
+        if (Input.GetButtonDown("LB"))
+        {
+            Debug.Log("LB");
+            Y.GetComponent<Renderer>().material.color = Color.red;
+            if (ynotes == true)
+            {
+                ynotes = false;
+                Ynotes.SetActive(false);
+                Destroy(Ynotes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Input.GetButtonUp("LB"))
+        {
+            Y.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
         if (Input.GetButtonDown("joystick button 2"))
         {
             X.GetComponent<Renderer>().material.color = Color.red;
@@ -70,6 +89,21 @@ public class NotesRod : MonoBehaviour
             }
         }
         else if (Input.GetButtonUp("joystick button 2"))
+        {
+            X.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+        if (Input.GetButtonDown("RB"))
+        {
+            X.GetComponent<Renderer>().material.color = Color.red;
+            if (xnotes == true)
+            {
+                xnotes = false;
+                Xnotes.SetActive(false);
+                Destroy(Xnotes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Input.GetButtonUp("RB"))
         {
             X.GetComponent<Renderer>().material.color = Color.blue;
         }
@@ -89,6 +123,22 @@ public class NotesRod : MonoBehaviour
             B.GetComponent<Renderer>().material.color = Color.blue;
         }
 
+        if (Xyoko==-1)
+        {
+            Debug.Log("LT");
+            B.GetComponent<Renderer>().material.color = Color.red;
+            if (bnotes == true)
+            {
+                bnotes = false;
+                Bnotes.SetActive(false);
+                Destroy(Bnotes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Xyoko==0)
+        {
+            B.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
         if (Input.GetButtonDown("joystick button 0"))
         {
             A.GetComponent<Renderer>().material.color = Color.red;
@@ -100,6 +150,22 @@ public class NotesRod : MonoBehaviour
             }
         }
         else if (Input.GetButtonUp("joystick button 0"))
+        {
+            A.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+        if (Xtate==-1)
+        {
+            Debug.Log("RT");
+            A.GetComponent<Renderer>().material.color = Color.red;
+            if (anotes == true)
+            {
+                anotes = false;
+                Anotes.SetActive(false);
+                Destroy(Anotes.gameObject.transform.root.gameObject);
+            }
+        }
+        else if (Xtate==0)
         {
             A.GetComponent<Renderer>().material.color = Color.blue;
         }
