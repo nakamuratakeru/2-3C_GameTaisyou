@@ -84,15 +84,15 @@ public class GameManager1 : MonoBehaviour
             float timing = float.Parse(note["timing"].Get<string>());
 
             GameObject Note;
-            if (type == "Y")
-            {
-                Note = Instantiate(Ynotes, YSpawnPoint.position, Quaternion.identity);
-            }
-            else if (type == "X")
+            //if (type == "Y")
+            //{
+            //    Note = Instantiate(Ynotes, YSpawnPoint.position, Quaternion.identity);
+            //}
+            if (type == "X")
             {
                 Note = Instantiate(Xnotes, XSpawnPoint.position, Quaternion.identity);
             }
-            else if(type=="B")
+            else if (type == "B")
             {
                 Note = Instantiate(Bnotes, BSpawnPoint.position, Quaternion.identity); // default don
             }
@@ -113,7 +113,8 @@ public class GameManager1 : MonoBehaviour
     {
         PlayTime = Time.time * 1000;
         isPlaying = true;
-        if (isPlaying = true && mstop < 1) {
+        if (isPlaying = true && mstop < 1)
+        {
             AudioSource.PlayClipAtPoint(explosionSE, transform.position);
             mstop += 1;
             Debug.Log("Game Start!");

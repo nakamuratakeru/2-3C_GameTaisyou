@@ -3,49 +3,28 @@
   "bpm": "120",
   "notes": [
     {
-      "timing": "2160",
-      "type": "X"
-    },
-    {
-      "timing": "2440",
+      "timing": "3000",
       "type": "Y"
     },
     {
-      "timing": "2740",
+      "timing": "3300",
       "type": "B"
     },
     {
-      "timing": "3030",
+      "timing": "5000",
       "type": "A"
     },
     {
-      "timing": "3330",
+      "timing": "6000",
       "type": "Y"
     },
     {
-      "timing": "3610",
+      "timing": "7000",
       "type": "Y"
     },
     {
-      "timing": "3900",
-      "type": "B"
-    },
-    {
-      "timing": "4190",
+      "timing": "9000",
       "type": "X"
-    },
-    {
-      "timing": "4480",
-      "type": "Y"
-    },
-    {
-      "timing": "4770",
-      "type": "Y"
-    },
-    {
-      "timing": "6020",
-      "type": "Y"
     }
-
   ]
 }
