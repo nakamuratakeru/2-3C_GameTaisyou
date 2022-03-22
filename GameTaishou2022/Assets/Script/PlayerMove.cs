@@ -6,6 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
 
     Animator animator;
+  
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +20,10 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+       
+
+
         if (Input.GetKeyDown("joystick button 0")){ //Aボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
             Debug.Log("Aで攻撃！");
@@ -43,10 +50,12 @@ public class PlayerMove : MonoBehaviour
 
 
 
-        float Xyoko_new = Input.GetAxis("LT");
-        float Xtate_new = Input.GetAxis("RT");
+        float Xyoko_new = Input.GetAxisRaw("LT");
+        float Xtate_new = Input.GetAxisRaw("RT");
 
-       
+
+
+
 
 
         if (Xtate_new == -1)

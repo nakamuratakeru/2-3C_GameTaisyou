@@ -115,7 +115,8 @@ public class GameManager1 : MonoBehaviour
         isPlaying = true;
         if (isPlaying = true && mstop < 1)
         {
-            AudioSource.PlayClipAtPoint(explosionSE, transform.position);
+            //AudioSource.PlayClipAtPoint(explosionSE, transform.position);
+            AudioSource.PlayClipAtPoint(explosionSE, new Vector3(0, 0, -5)); //new Vector3の数値はmain cameraのpositionの数値を参照
             mstop += 1;
             Debug.Log("Game Start!");
         }
