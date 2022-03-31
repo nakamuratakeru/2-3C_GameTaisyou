@@ -30,11 +30,11 @@ public class Attackanim : MonoBehaviour
             animator.SetTrigger("XBomb");
             Debug.Log("X魔法攻撃！");
         }
-        if (Input.GetKeyDown("joystick button 3"))
-        {　//Yボタンを押すとYノーツの位置で魔法攻撃のアニメーションが流れる
-            animator.SetTrigger("YBomb");
-            Debug.Log("Y魔法攻撃！");
-        }
+        //if (Input.GetKeyDown("joystick button 3"))
+        //{　//Yボタンを押すとYノーツの位置で魔法攻撃のアニメーションが流れる
+        //    animator.SetTrigger("YBomb");
+        //    Debug.Log("Y魔法攻撃！");
+        //}
 
         if (Input.GetKeyDown("joystick button 5"))
         {　//RBボタンを押すと魔法の杖のアニメーションが流れる

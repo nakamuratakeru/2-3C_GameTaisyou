@@ -43,10 +43,10 @@ public class PlayerMove : MonoBehaviour
             animator.SetTrigger("magic");
             Debug.Log("RB(X)で攻撃！");
         }
-        if (Input.GetKeyDown("joystick button 3")){　//Yボタンを押すと魔法の杖のアニメーションが流れる
-            animator.SetTrigger("magic");
-            Debug.Log("Yで攻撃！");
-        }
+        //if (Input.GetKeyDown("joystick button 3")){　//Yボタンを押すと魔法の杖のアニメーションが流れる
+        //    animator.SetTrigger("magic");
+        //    Debug.Log("Yで攻撃！");
+        //}
 
 
 
