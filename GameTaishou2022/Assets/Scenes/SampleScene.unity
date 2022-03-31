@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 47885517}
   - component: {fileID: 47885516}
   - component: {fileID: 47885515}
+  - component: {fileID: 47885518}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -202,7 +203,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 47885516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 47885518}
+        m_MethodName: OneClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &47885516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +251,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47885513}
   m_CullTransparentMesh: 0
+--- !u!114 &47885518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47885513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb8e8bceafe6d9499605fd1eca34bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &74798921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1197,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313008476}
   m_CullTransparentMesh: 0
+--- !u!1 &317312964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317312965}
+  - component: {fileID: 317312966}
+  m_Layer: 0
+  m_Name: NoteSetting2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317312965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317312964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.203333, y: -2.109012, z: -2.4813461}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317312966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317312964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a066dd473ad54644bcb960e78e71571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FilePath: Charts/sample001s
+  Play: {fileID: 74798923}
+  SetChart: {fileID: 47885515}
+  Ynotes: {fileID: 8554154281809826823, guid: e53e153bf07a36f42a7853f3ad198a41, type: 3}
+  Xnotes: {fileID: 7157580410370104738, guid: 5027d68a442fff942b327344d56ade94, type: 3}
+  Bnotes: {fileID: 4494729889948013348, guid: e414dbdbbf837fc44b257fa7c766ea75, type: 3}
+  Anotes: {fileID: 6078886027829899810, guid: aef7a88439bb93d419a7728315b00b10, type: 3}
+  YSpawnPoint: {fileID: 2004234269}
+  XSpawnPoint: {fileID: 187555560}
+  BSpawnPoint: {fileID: 1484673174}
+  ASpawnPoint: {fileID: 1016616499}
+  BeatPoint: {fileID: 238525630}
+  explosionSE: {fileID: 8300000, guid: 12600f8cbf3c472449f6b9cdba4ee65b, type: 3}
 --- !u!1 &424873025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,7 +2003,7 @@ PrefabInstance:
     - target: {fileID: 452671619184359154, guid: 9816d69f1715288409e9f27e1fdab7da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.19
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 452671619184359154, guid: 9816d69f1715288409e9f27e1fdab7da,
         type: 3}
@@ -3244,7 +3324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1711585820
 MonoBehaviour:
   m_ObjectHideFlags: 0
