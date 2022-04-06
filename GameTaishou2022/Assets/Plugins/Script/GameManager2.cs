@@ -8,7 +8,9 @@ using UniRx.Triggers;
 
 public class GameManager2 : MonoBehaviour
 {
-   
+    [SerializeField] GameObject GameclearCanvas;　//ゲームクリア時に表示されるクリアパネルを入れる
+    private float step_time; //ゲームプレイ中の経過時間をカウントする
+    public static bool clearflg = false;
     [SerializeField] string FilePath;
 
     [SerializeField] Button Play;
@@ -26,7 +28,8 @@ public class GameManager2 : MonoBehaviour
     [SerializeField] Transform BeatPoint;
 
     //　ノーツを動かすために必要になる変数を追加
-    float BeforeTime;
+  
+   
     float PlayTime;
     float Distance;
     float During;
@@ -38,6 +41,13 @@ public class GameManager2 : MonoBehaviour
     string Title;
     int BPM;
     List<GameObject> Notes;
+
+    void Start()
+    {
+        step_time = 0.0f;       // 経過時間初期化
+        GameclearCanvas.SetActive(false);
+
+    }
 
     void OnEnable()
     {
@@ -112,8 +122,9 @@ public class GameManager2 : MonoBehaviour
     // ゲーム開始時に追加した変数に値をセット
     void play()
     {
+     
         PlayTime = Time.time * 1000;
-        BeforeTime = Time.time*1000;
+       
         isPlaying = true;
         if (isPlaying = true && mstop < 1)
         {
@@ -124,7 +135,25 @@ public class GameManager2 : MonoBehaviour
                 Debug.Log("Game Start!");
             
         }
-        
+       
+
         //Debug.Log("Game Start!");
     }
+
+    public void Update()
+    {
+        if (mstop == 1)
+        {
+            step_time += Time.deltaTime;
+            //Debug.Log("計測中");
+            if (step_time >= 30.0f)　//プレイ開始から30秒経過するとゲームクリアパネルが表示される。
+            {
+                Debug.Log("ゲームクリア！");
+                clearflg = true;
+                GameclearCanvas.SetActive(true);
+            }
+        }
+    }
+
 }
+
