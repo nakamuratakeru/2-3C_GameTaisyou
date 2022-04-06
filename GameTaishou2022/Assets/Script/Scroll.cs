@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class Scroll: MonoBehaviour
 {
+    
     void Update()
     {
-        transform.Translate(-0.05f, 0, 0);
-        if (transform.position.x < -63.8f)
+        transform.Translate(-2.7f*Time.deltaTime, 0, 0);
+        if (transform.position.x < -62.8f)
         {
-            transform.position = new Vector3(63.8f, 0, 0);
+            transform.position = new Vector3(62.8f, 0, 0);
         }
     }
 }
