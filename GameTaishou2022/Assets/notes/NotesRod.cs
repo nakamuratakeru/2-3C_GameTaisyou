@@ -14,11 +14,15 @@ public class NotesRod : MonoBehaviour
     GameObject Bnotes;
     GameObject Anotes;
 
-    bool ynotes=false;
-    bool xnotes = false;
-    bool bnotes = false;
-    bool anotes = false;
+    public static bool ynotes;
+    public static bool xnotes;
+    public static bool bnotes;
+    public static bool anotes;
     bool niceflg = false;
+
+    public static bool Aflg;
+    public static bool Bflg;
+    public static bool Xflg;
 
     float x_val;
     public float speed;
@@ -28,12 +32,54 @@ public class NotesRod : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    ynotes = false;
+    xnotes = false;
+    bnotes = false;
+    anotes = false;
+
+
         bool Yflg =false;
-        bool Xflg =false;
         bool Bflg =false;
-        bool Aflg =false;
+        Aflg =false;
+        Bflg = false;
+        Xflg = false;
 
         //Ycolor = Y.GetComponent<Renderer>().material.color;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("Ynotes"))
+        {
+            Ynotes = other.gameObject;
+            ynotes = true;
+        }
+
+        if (other.gameObject.CompareTag("Xnotes"))
+        {
+            Xnotes = other.gameObject;
+            xnotes = true;
+        }
+
+        if (other.gameObject.CompareTag("Bnotes"))
+        {
+            Bnotes = other.gameObject;
+            bnotes = true;
+        }
+
+        if (other.gameObject.CompareTag("Anotes"))
+        {
+            Anotes = other.gameObject;
+            anotes = true;
+        }
+
+        if (other.gameObject.CompareTag("nice"))
+        {
+            niceflg = true;
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
     }
 
     // Update is called once per frame
@@ -80,136 +126,114 @@ public class NotesRod : MonoBehaviour
 
         if (Input.GetButtonDown("joystick button 2"))
         {
+            Xflg = true;
             X.GetComponent<Renderer>().material.color = Color.red;
             if (xnotes == true)
             {
-                xnotes = false;
-                Xnotes.SetActive(false);
+                
+                //Xnotes.SetActive(false);
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
+                xnotes = false;
             }
         }
         else if (Input.GetButtonUp("joystick button 2"))
         {
             X.GetComponent<Renderer>().material.color = Color.blue;
+            Xflg = false;
         }
 
         if (Input.GetButtonDown("RB"))
         {
+            Xflg = true;
             X.GetComponent<Renderer>().material.color = Color.red;
             if (xnotes == true)
             {
-                xnotes = false;
-                Xnotes.SetActive(false);
+                
+                //Xnotes.SetActive(false);
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
+                xnotes = false;
             }
         }
         else if (Input.GetButtonUp("RB"))
         {
             X.GetComponent<Renderer>().material.color = Color.blue;
+            Xflg = false;
         }
 
         if (Input.GetButtonDown("joystick button 1"))
         {
+            Bflg = true;
+      
             B.GetComponent<Renderer>().material.color = Color.red;
             if (bnotes == true)
             {
-                bnotes = false;
-                Bnotes.SetActive(false);
+                
+                //Bnotes.SetActive(false);
                 Destroy(Bnotes.gameObject.transform.root.gameObject);
+                bnotes = false;
             }
         }
         else if (Input.GetButtonUp("joystick button 1"))
         {
             B.GetComponent<Renderer>().material.color = Color.blue;
+            Bflg = false;
         }
 
         if (Xyoko==-1)
         {
-            Debug.Log("LT");
+            Bflg = true;
             B.GetComponent<Renderer>().material.color = Color.red;
             if (bnotes == true)
             {
-                bnotes = false;
-                Bnotes.SetActive(false);
+                
+              
+                //Bnotes.SetActive(false);
                 Destroy(Bnotes.gameObject.transform.root.gameObject);
+                bnotes = false;
             }
         }
         else if (Xyoko==0)
         {
             B.GetComponent<Renderer>().material.color = Color.blue;
+            Bflg = false;
         }
 
         if (Input.GetButtonDown("joystick button 0"))
         {
+            Aflg = true;
             A.GetComponent<Renderer>().material.color = Color.red;
             if (anotes == true)
             {
-                anotes = false;
-                Anotes.SetActive(false);
+                
+                //Anotes.SetActive(false);
                 Destroy(Anotes.gameObject.transform.root.gameObject);
+                anotes = false;
+
             }
         }
         else if (Input.GetButtonUp("joystick button 0"))
         {
             A.GetComponent<Renderer>().material.color = Color.blue;
+            Aflg = false;
         }
 
         if (Xtate==-1)
         {
-            Debug.Log("RT");
+            Aflg = true;
             A.GetComponent<Renderer>().material.color = Color.red;
             if (anotes == true)
             {
-                anotes = false;
-                Anotes.SetActive(false);
+                
+                //Anotes.SetActive(false);
                 Destroy(Anotes.gameObject.transform.root.gameObject);
+                anotes = false;
+
             }
         }
         else if (Xtate==0)
         {
             A.GetComponent<Renderer>().material.color = Color.blue;
-        }
-
-
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        
-        if (other.gameObject.CompareTag("Ynotes"))
-        {
-            Ynotes = other.gameObject;
-            ynotes = true;
-            Debug.Log("atari");
-        }
-
-        if (other.gameObject.CompareTag("Xnotes"))
-        {
-            Xnotes = other.gameObject;
-            xnotes = true;
-            Debug.Log("atari");
-        }
-
-        if (other.gameObject.CompareTag("Bnotes"))
-        {
-            Bnotes = other.gameObject;
-            bnotes = true;
-            Debug.Log("atari");
-        }
-
-        if (other.gameObject.CompareTag("Anotes"))
-        {
-            Anotes = other.gameObject;
-            anotes = true;
-            Debug.Log("atari");
-        }
-
-        if (other.gameObject.CompareTag("nice"))
-        {
-            Debug.Log("nice");
-            niceflg = true;
-            //perfect(red)  good(green) nice(bule) miss(white)
+            Aflg = false;
         }
     }
 }
