@@ -37,7 +37,7 @@ public class GameManager2 : MonoBehaviour
     int GoIndex;
     public AudioClip explosionSE;
     int mstop = 0; //mstopの数値が１以上になるとplayボタンを押しても音楽が流れなくなる。
-   
+    int gc = 0;
     string Title;
     int BPM;
     List<GameObject> Notes;
@@ -130,7 +130,7 @@ public class GameManager2 : MonoBehaviour
         {
             
                 //AudioSource.PlayClipAtPoint(explosionSE, transform.position);
-                AudioSource.PlayClipAtPoint(explosionSE, new Vector3(0, 0, -5)); //new Vector3の数値はmain cameraのpositionの数値を参照
+                AudioSource.PlayClipAtPoint(explosionSE, new Vector3(-22, 0, -5)); //new Vector3の数値はmain cameraのpositionの数値を参照
                 mstop += 1;
                 Debug.Log("Game Start!");
             
@@ -146,11 +146,12 @@ public class GameManager2 : MonoBehaviour
         {
             step_time += Time.deltaTime;
             //Debug.Log("計測中");
-            if (step_time >= 30.0f)　//プレイ開始から30秒経過するとゲームクリアパネルが表示される。
+            if (step_time >= 30.0f&&gc<1)　//プレイ開始から30秒経過するとゲームクリアパネルが表示される。
             {
                 Debug.Log("ゲームクリア！");
                 clearflg = true;
                 GameclearCanvas.SetActive(true);
+                gc += 1;
             }
         }
     }
