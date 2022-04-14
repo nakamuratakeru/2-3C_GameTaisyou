@@ -2958,17 +2958,17 @@ PrefabInstance:
     - target: {fileID: 6084058126678923304, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126678923304, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126678923304, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.g
-      value: 0.97120583
+      value: 0.5917661
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126678923304, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
@@ -2978,7 +2978,7 @@ PrefabInstance:
     - target: {fileID: 6084058126678923304, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.62840414
+      value: 0.95774907
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126678923304, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
@@ -3033,17 +3033,17 @@ PrefabInstance:
     - target: {fileID: 6084058126991178783, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126991178783, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126991178783, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.g
-      value: 0.983102
+      value: 0.5949937
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126991178783, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
@@ -3053,7 +3053,7 @@ PrefabInstance:
     - target: {fileID: 6084058126991178783, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.44935164
+      value: 0.9243814
       objectReference: {fileID: 0}
     - target: {fileID: 6084058126991178783, guid: d05d33443c322b64a9c4eed224da8800,
         type: 3}
