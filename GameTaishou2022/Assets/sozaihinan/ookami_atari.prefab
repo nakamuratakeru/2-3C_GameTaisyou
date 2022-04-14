@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 7985640805046069472}
   - component: {fileID: 5286652525496379946}
   - component: {fileID: 2036034258280831601}
+  - component: {fileID: 4784213078161004448}
+  - component: {fileID: 7005175183773778262}
   m_Layer: 0
-  m_Name: ookami_0 1
+  m_Name: ookami_atari
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,6 +145,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4784213078161004448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595317359071168206}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecdc5ad77bdda44296cacc16e29896b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!114 &7005175183773778262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595317359071168206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f84437b352b5c4bb10b191117aeadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notesSpeed: 0.1
+  startPos: {x: 14, y: -1.15}
+  judgePos: {x: 0.09644994, y: -2.01}
 --- !u!1001 &3079762724924149657
 PrefabInstance:
   m_ObjectHideFlags: 0

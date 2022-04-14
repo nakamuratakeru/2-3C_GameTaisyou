@@ -13,6 +13,7 @@ TagManager:
   - Anotes
   - Atarihan
   - HPslider
+  - AudioPlay
   layers:
   - Default
   - TransparentFX

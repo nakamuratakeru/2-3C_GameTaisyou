@@ -1,0 +1,169 @@
+﻿{
+  "name": "banbado_piano",
+  "maxBlock": 5,
+  "BPM": 144,
+  "offset": 400,
+  "notes":[
+      {
+        "LPB": 8,
+        "num": 0,
+        "block": 0,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 16,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 64,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 128,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 192,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 208,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 256,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 288,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 336,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 352,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 384,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 416,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 432,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 464,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 479,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 512,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 544,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 560,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 592,
+        "block": 2,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 608,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 656,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 688,
+        "block": 3,
+        "type": 1,
+        "notes": []
+      },
+      {
+        "LPB": 4,
+        "num": 704,
+        "block": 1,
+        "type": 1,
+        "notes": []
+      }
+    ]
+}
