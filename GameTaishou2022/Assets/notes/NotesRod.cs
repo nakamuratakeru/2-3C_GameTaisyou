@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class NotesRod : MonoBehaviour
 {
     GameObject Y;
@@ -29,6 +30,10 @@ public class NotesRod : MonoBehaviour
 
     Color Ycolor;
 
+    public static int score;
+    public static int combo;
+    bool comboreset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,36 +49,56 @@ public class NotesRod : MonoBehaviour
         Bflg = false;
         Xflg = false;
 
+        comboreset = false;
+
         //Ycolor = Y.GetComponent<Renderer>().material.color;
     }
 
+    private void Score()
+    {
+        score += 100;
+    }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Combo()
+    {
+        combo += 1;
+        if (comboreset = true)
+        {
+            combo = 0;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
     {
 
         if (other.gameObject.CompareTag("Ynotes"))
         {
             Ynotes = other.gameObject;
             ynotes = true;
+
         }
+       
 
         if (other.gameObject.CompareTag("Xnotes"))
         {
             Xnotes = other.gameObject;
             xnotes = true;
         }
+      
 
         if (other.gameObject.CompareTag("Bnotes"))
         {
             Bnotes = other.gameObject;
             bnotes = true;
         }
+       
 
         if (other.gameObject.CompareTag("Anotes"))
         {
             Anotes = other.gameObject;
             anotes = true;
         }
+       
 
         if (other.gameObject.CompareTag("nice"))
         {
@@ -82,10 +107,35 @@ public class NotesRod : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Xnotes"))
+        {
+            Xnotes = null;
+            xnotes = false;
+
+        }
+
+        if (other.gameObject.CompareTag("Bnotes"))
+        {
+            Bnotes = null;
+            bnotes = false;
+
+        }
+
+        if (other.gameObject.CompareTag("Anotes"))
+        {
+            Anotes = null;
+            anotes = false;
+
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
 
+        comboreset = ComboReset.comboreset;
         float Xyoko = Input.GetAxisRaw("LT");
         float Xtate = Input.GetAxisRaw("RT");
 
@@ -134,6 +184,8 @@ public class NotesRod : MonoBehaviour
                 //Xnotes.SetActive(false);
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
                 xnotes = false;
+                Score();
+                Combo();
             }
         }
         else if (Input.GetButtonUp("joystick button 2"))
@@ -152,6 +204,8 @@ public class NotesRod : MonoBehaviour
                 //Xnotes.SetActive(false);
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
                 xnotes = false;
+                Score();
+                Combo();
             }
         }
         else if (Input.GetButtonUp("RB"))
@@ -171,6 +225,8 @@ public class NotesRod : MonoBehaviour
                 //Bnotes.SetActive(false);
                 Destroy(Bnotes.gameObject.transform.root.gameObject);
                 bnotes = false;
+                Score();
+                Combo();
             }
         }
         else if (Input.GetButtonUp("joystick button 1"))
@@ -190,6 +246,8 @@ public class NotesRod : MonoBehaviour
                 //Bnotes.SetActive(false);
                 Destroy(Bnotes.gameObject.transform.root.gameObject);
                 bnotes = false;
+                Score();
+                Combo();
             }
         }
         else if (Xyoko==0)
@@ -208,6 +266,8 @@ public class NotesRod : MonoBehaviour
                 //Anotes.SetActive(false);
                 Destroy(Anotes.gameObject.transform.root.gameObject);
                 anotes = false;
+                Score();
+                Combo();
 
             }
         }
@@ -227,6 +287,8 @@ public class NotesRod : MonoBehaviour
                 //Anotes.SetActive(false);
                 Destroy(Anotes.gameObject.transform.root.gameObject);
                 anotes = false;
+                Score();
+                Combo();
 
             }
         }
