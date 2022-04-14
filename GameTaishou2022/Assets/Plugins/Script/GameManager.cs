@@ -1,112 +1,95 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UniRx;
-using UniRx.Triggers;
+﻿//using System;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.UI;
+//using UniRx;
+//using UniRx.Triggers;
 
-public class GameManager : MonoBehaviour
-{
+//[Serializable]
+//public class Humen {
+//    public string name;
+//    public int maxBlock;
+//    public int BPM;
+//    public int offset;
+//    public Notes[] notes;
 
-    [SerializeField] string FilePath;
+//}
+//[Serializable]
+//public class Notes {
+//    public int num;
+//    public int block;
+//}
 
-    [SerializeField] Button Play;
-    [SerializeField] Button SetChart;
 
-    [SerializeField] GameObject Don;
-    [SerializeField] GameObject Ka;
 
-    [SerializeField] Transform SpawnPoint;
-    [SerializeField] Transform BeatPoint;
+//public class GameManager : MonoBehaviour {
 
-    //　ノーツを動かすために必要になる変数を追加
-    float PlayTime;
-    float Distance;
-    float During;
-    bool isPlaying;
-    int GoIndex;
-    public AudioClip explosionSE;
-    int mstop =0; //mstopの数値が１以上になるとplayボタンを押しても音楽が流れなくなる。
+//    [SerializeField] string FilePath;
 
-    string Title;
-    int BPM;
-    List<GameObject> Notes;
+//    [SerializeField] Button Play;
+//    [SerializeField] Button SetChart;
 
-    void OnEnable()
-    {
-        // 追加した変数に値をセット
-        Distance = Math.Abs(BeatPoint.position.x - SpawnPoint.position.x);
-        During = 4 * 1000;
-        isPlaying = false;
-        GoIndex = 0;
+//    [SerializeField] GameObject Don;
+//    [SerializeField] GameObject Ka;
 
-        Debug.Log(Distance);
+//    [SerializeField] Transform SpawnPoint;
+//    [SerializeField] Transform BeatPoint;
 
-        Play.onClick
-          .AsObservable()
-          .Subscribe(_ => play());
+//    int note;
+//    float TimeCount = 0.01f;
+//    public GameObject notepref;
+//    public GameObject exnotepref;
+//    void Start() {
 
-        SetChart.onClick
-          .AsObservable()
-          .Subscribe(_ => loadChart());
 
-        // ノーツを発射するタイミングかチェックし、go関数を発火
-        this.UpdateAsObservable()
-          .Where(_ => isPlaying)
-          .Where(_ => Notes.Count > GoIndex)
-          .Where(_ => Notes[GoIndex].GetComponent<NoteController>().getTiming() <= ((Time.time * 1000 - PlayTime) + During))
-          .Subscribe(_ => {
-              Notes[GoIndex].GetComponent<NoteController>().go(Distance, During);
-              GoIndex++;
-          });
-    }
+//        string inputString = Resources.Load<TextAsset>("test").ToString();
 
-    void loadChart()
-    {
-        Notes = new List<GameObject>();
+//        Humen inputJson = JsonUtility.FromJson<Humen>(inputString);
 
-        string jsonText = Resources.Load<TextAsset>(FilePath).ToString();
+//        //string Title;
+//        //int BPM;
+//        //List<GameObject> Notes;
 
-        JsonNode json = JsonNode.Parse(jsonText);
-        Title = json["title"].Get<string>();
-        BPM = int.Parse(json["bpm"].Get<string>());
+//        void OnEnable() {
+//        Play.onClick
+//          .AsObservable()
+//          .Subscribe(_ => play());
 
-        foreach (var note in json["notes"])
-        {
-            string type = note["type"].Get<string>();
-            float timing = float.Parse(note["timing"].Get<string>());
+//        SetChart.onClick
+//          .AsObservable()
+//          .Subscribe(_ => loadChart());
+//    }
 
-            GameObject Note;
-            if (type == "don")
-            {
-                Note = Instantiate(Don, SpawnPoint.position, Quaternion.identity);
-            }
-            else if (type == "ka")
-            {
-                Note = Instantiate(Ka, SpawnPoint.position, Quaternion.identity);
-            }
-            else
-            {
-                Note = Instantiate(Don, SpawnPoint.position, Quaternion.identity); // default don
-            }
+//    void loadChart() {
+//        //Notes = new List<GameObject>();
 
-            // setParameter関数を発火
-            Note.GetComponent<NoteController>().setParameter(type, timing);
+//        //string jsonText = Resources.Load<TextAsset>(FilePath).ToString();
 
-            Notes.Add(Note);
-        }
-    }
+//        //JsonNode json = JsonNode.Parse(jsonText);
+//        //Title = json["title"].Get<string>();
+//        //BPM = int.Parse(json["bpm"].Get<string>());
 
-    // ゲーム開始時に追加した変数に値をセット
-    void play()
-    {
-        PlayTime = Time.time * 1000;
-        isPlaying = true;
-        if (isPlaying = true&&mstop<1) {
-            AudioSource.PlayClipAtPoint(explosionSE, transform.position);
-            mstop += 1;
-        }
-        Debug.Log("Game Start!");
-    }
-}
+//        //foreach (var note in json["notes"]) {
+//        //    string type = note["type"].Get<string>();
+//        //    float timing = float.Parse(note["num"].Get<string>());
+
+//            GameObject Note;
+//            if (type == "(notepref") {
+//                Note = Instantiate(notepref, SpawnPoint.position, Quaternion.identity);
+//            }
+//            else if (type == "exnotepre") {
+//                Note = Instantiate(exnotepre, SpawnPoint.position, Quaternion.identity);
+//            }
+//            else {
+//                Note = Instantiate(notepref, SpawnPoint.position, Quaternion.identity); // default don
+//            }
+
+//            Notes.Add(Note);
+//        }
+//    }
+
+//    void play() {
+//        Debug.Log("Game Start!");
+//    }
+//}

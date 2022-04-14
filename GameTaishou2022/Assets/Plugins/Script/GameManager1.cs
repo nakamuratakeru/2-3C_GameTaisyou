@@ -6,8 +6,7 @@ using UnityEngine.UI;
 using UniRx;
 using UniRx.Triggers;
 
-public class GameManager1 : MonoBehaviour
-{
+public class GameManager1 : MonoBehaviour {
 
     [SerializeField] string FilePath;
 
@@ -39,8 +38,7 @@ public class GameManager1 : MonoBehaviour
     int BPM;
     List<GameObject> Notes;
 
-    void OnEnable()
-    {
+    void OnEnable() {
         // 追加した変数に値をセット
         Distance = Math.Abs(BeatPoint.position.x - YSpawnPoint.position.x);
         During = 4 * 1000;
@@ -68,8 +66,7 @@ public class GameManager1 : MonoBehaviour
           });
     }
 
-    void loadChart()
-    {
+    void loadChart() {
         Notes = new List<GameObject>();
 
         string jsonText = Resources.Load<TextAsset>(FilePath).ToString();
@@ -78,8 +75,7 @@ public class GameManager1 : MonoBehaviour
         Title = json["title"].Get<string>();
         BPM = int.Parse(json["bpm"].Get<string>());
 
-        foreach (var note in json["notes"])
-        {
+        foreach (var note in json["notes"]) {
             string type = note["type"].Get<string>();
             float timing = float.Parse(note["timing"].Get<string>());
 
@@ -88,16 +84,13 @@ public class GameManager1 : MonoBehaviour
             //{
             //    Note = Instantiate(Ynotes, YSpawnPoint.position, Quaternion.identity);
             //}
-            if (type == "X")
-            {
+            if (type == "X") {
                 Note = Instantiate(Xnotes, XSpawnPoint.position, Quaternion.identity);
             }
-            else if (type == "B")
-            {
+            else if (type == "B") {
                 Note = Instantiate(Bnotes, BSpawnPoint.position, Quaternion.identity); // default don
             }
-            else
-            {
+            else {
                 Note = Instantiate(Anotes, ASpawnPoint.position, Quaternion.identity); // default don
             }
 
@@ -109,14 +102,11 @@ public class GameManager1 : MonoBehaviour
     }
 
     // ゲーム開始時に追加した変数に値をセット
-    void play()
-    {
+    void play() {
         PlayTime = Time.time * 1000;
         isPlaying = true;
-        if (isPlaying = true && mstop < 1)
-        {
-            //AudioSource.PlayClipAtPoint(explosionSE, transform.position);
-            AudioSource.PlayClipAtPoint(explosionSE, new Vector3(0, 0, 0)); //new Vector3の数値はmain cameraのpositionの数値を参照
+        if (isPlaying = true && mstop < 1) {
+            AudioSource.PlayClipAtPoint(explosionSE, transform.position);
             mstop += 1;
             Debug.Log("Game Start!");
         }
