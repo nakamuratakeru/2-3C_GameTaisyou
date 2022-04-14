@@ -26,7 +26,7 @@ public class Title : MonoBehaviour
         if (Startkettei == true)
         {
             /*GetComponent<AudioSource>().Play(); */    //音を再生
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("MyMenu");
         }
     }
 }
