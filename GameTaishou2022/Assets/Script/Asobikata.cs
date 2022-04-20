@@ -98,7 +98,7 @@ public class Asobikata : MonoBehaviour
         bool Startkettei = Input.GetKeyDown("joystick button 0");
         if (Startkettei == true)
         {
-            SceneManager.LoadScene("Mymenu");
+            SceneManager.LoadScene("MyMenu1");
         }
     }
 }
