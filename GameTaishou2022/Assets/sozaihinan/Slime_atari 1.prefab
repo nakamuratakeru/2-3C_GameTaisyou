@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7162345075917807098}
   - component: {fileID: 3848646729152186644}
   - component: {fileID: 909588765805431914}
-  - component: {fileID: 5122912956027315677}
+  - component: {fileID: 1274305421853315302}
   m_Layer: 0
   m_Name: Slime_atari 1
   m_TagString: Untagged
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
---- !u!114 &5122912956027315677
+--- !u!114 &1274305421853315302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,12 +181,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7587156464257593370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f84437b352b5c4bb10b191117aeadb, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf6cc7b0dfe6f54d8b4e546d537dd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesSpeed: 0.1
-  startPos: {x: 14, y: -2.01}
-  judgePos: {x: 0.09644994, y: -5.21}
+  notesSpeed: 0.08
+  startPos: {x: 0, y: 0}
+  judgePos: {x: 0, y: 0}
 --- !u!1001 &1851050639734289444
 PrefabInstance:
   m_ObjectHideFlags: 0

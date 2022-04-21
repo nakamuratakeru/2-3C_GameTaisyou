@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class cursorselectmenu : MonoBehaviour
 {
-    public int It = 0;
     public int Iz = 0;
     public int i = 0;
 
@@ -26,10 +25,10 @@ public class cursorselectmenu : MonoBehaviour
     //アップデート関数
     void Update()
     {
-        float y = Input.GetAxisRaw("Vertical");
+        
         float x = Input.GetAxisRaw("Horizontal");
 
-        if (y == +1 || y == -1 || x == +1 || x == -1)
+        if (x == -1 || x == +1)
         {
             if (i == 0)
             {
@@ -42,7 +41,7 @@ public class cursorselectmenu : MonoBehaviour
             i = 0;
         }
 
-        if (Input.GetKeyDown("joystick button 0") && It == 0 && Iz == 0)
+        if (Input.GetKeyDown("joystick button 0") && Iz == 0)
         {
             //Stage1へ移動
             SceneManager.LoadScene("SampleScene");
@@ -51,7 +50,7 @@ public class cursorselectmenu : MonoBehaviour
             //audio.PlayOneShot(sound2);
 
         }
-        else if (Input.GetKeyDown("joystick button 0") && It == 0 && Iz == 1)
+        else if (Input.GetKeyDown("joystick button 0") && Iz == 1)
         {
             //Stage2へ移動
             SceneManager.LoadScene("Asobikata");
@@ -61,14 +60,7 @@ public class cursorselectmenu : MonoBehaviour
             //audio.PlayOneShot(sound2);
 
         }
-        else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 0)
-        {
-            //Stage3へ移動
-            //SceneManager.LoadScene("stage3");
-
-            //audio.PlayOneShot(sound2);
-        }
-        else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 1)
+        else if (Input.GetKeyDown("joystick button 0") && Iz == 2)
         {
             //Stage4へ移動
             SceneManager.LoadScene("Title");
@@ -79,31 +71,28 @@ public class cursorselectmenu : MonoBehaviour
 
     public void Puro()
     {
-        float y = Input.GetAxisRaw("Vertical");
         float x = Input.GetAxisRaw("Horizontal");
-
-        if (y == -1 && It == 0)
-        {
-            transform.position += new Vector3(0, -151, 0);
-            It = 1;
-            //audio.PlayOneShot(sound);
-        }
-        else if (y == +1 && It == 1)
-        {
-            transform.position += new Vector3(0,151, 0);
-            It = 0;
-            //audio.PlayOneShot(sound);
-        }
-
         if (x == +1 && Iz == 0)
         {
-            transform.position += new Vector3(370, 0, 0);
+            transform.position += new Vector3(264, 0, 0);
+            Iz = 1;
+            //audio.PlayOneShot(sound);
+        }
+        else if (x == +1 && Iz == 1)
+        {
+            transform.position += new Vector3(232, 0, 0);
+            Iz = 2;
+            //audio.PlayOneShot(sound);
+        }
+        else if (x == -1 && Iz == 2)
+        {
+            transform.position += new Vector3(-232, 0, 0);
             Iz = 1;
             //audio.PlayOneShot(sound);
         }
         else if (x == -1 && Iz == 1)
         {
-            transform.position += new Vector3(-370, 0, 0);
+            transform.position += new Vector3(-264, 0, 0);
             Iz = 0;
             //audio.PlayOneShot(sound);
         }
