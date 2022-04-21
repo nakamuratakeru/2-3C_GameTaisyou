@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class NotesRod : MonoBehaviour
 {
-    GameObject Y;
+
     GameObject X;
     GameObject B;
     GameObject A;
 
-    GameObject Ynotes;
+ 
     GameObject Xnotes;
     GameObject Bnotes;
     GameObject Anotes;
 
-    public static bool ynotes;
     public static bool xnotes;
     public static bool bnotes;
     public static bool anotes;
@@ -37,13 +36,13 @@ public class NotesRod : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    ynotes = false;
+
     xnotes = false;
     bnotes = false;
     anotes = false;
 
 
-        bool Yflg =false;
+ 
         bool Bflg =false;
         Aflg =false;
         Bflg = false;
@@ -62,21 +61,11 @@ public class NotesRod : MonoBehaviour
     private void Combo()
     {
         combo += 1;
-        if (comboreset = true)
-        {
-            combo = 0;
-        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
 
-        if (other.gameObject.CompareTag("Ynotes"))
-        {
-            Ynotes = other.gameObject;
-            ynotes = true;
-
-        }
        
 
         if (other.gameObject.CompareTag("Xnotes"))
@@ -135,44 +124,21 @@ public class NotesRod : MonoBehaviour
     void Update()
     {
 
+      
+
         comboreset = ComboReset.comboreset;
+
+        if (comboreset == true)
+        {
+            combo = 0;
+        }
+
         float Xyoko = Input.GetAxisRaw("LT");
         float Xtate = Input.GetAxisRaw("RT");
 
-        Y = GameObject.Find("/NotesRod/Y");
         X = GameObject.Find("/NotesRod/X");
         B = GameObject.Find("/NotesRod/B");
         A = GameObject.Find("/NotesRod/A");
-
-        if (Input.GetButtonDown("joystick button 3")){
-            Y.GetComponent<Renderer>().material.color = Color.red;
-            if (ynotes == true)
-            {
-                ynotes = false;
-                Ynotes.SetActive(false);
-                Destroy(Ynotes.gameObject.transform.root.gameObject);
-            }
-        }
-        else if(Input.GetButtonUp("joystick button 3"))
-        {
-            Y.GetComponent<Renderer>().material.color = Color.blue;
-        }
-
-        if (Input.GetButtonDown("LB"))
-        {
-            Debug.Log("LB");
-            Y.GetComponent<Renderer>().material.color = Color.red;
-            if (ynotes == true)
-            {
-                ynotes = false;
-                Ynotes.SetActive(false);
-                Destroy(Ynotes.gameObject.transform.root.gameObject);
-            }
-        }
-        else if (Input.GetButtonUp("LB"))
-        {
-            Y.GetComponent<Renderer>().material.color = Color.blue;
-        }
 
         if (Input.GetButtonDown("joystick button 2"))
         {
@@ -180,8 +146,6 @@ public class NotesRod : MonoBehaviour
             X.GetComponent<Renderer>().material.color = Color.red;
             if (xnotes == true)
             {
-                
-                //Xnotes.SetActive(false);
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
                 xnotes = false;
                 Score();
@@ -200,8 +164,7 @@ public class NotesRod : MonoBehaviour
             X.GetComponent<Renderer>().material.color = Color.red;
             if (xnotes == true)
             {
-                
-                //Xnotes.SetActive(false);
+                Debug.Log("aaaaa");
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
                 xnotes = false;
                 Score();

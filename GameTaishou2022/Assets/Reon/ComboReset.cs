@@ -19,9 +19,14 @@ public class ComboReset : MonoBehaviour
 
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        comboreset = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

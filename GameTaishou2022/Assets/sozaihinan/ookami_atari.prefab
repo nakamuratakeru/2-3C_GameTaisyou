@@ -185,6 +185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ynotes
       objectReference: {fileID: 0}
+    - target: {fileID: 1123679394641156345, guid: f37ed2ff8ba47004582f6233668f2347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bnotes
+      objectReference: {fileID: 0}
     - target: {fileID: 1123679394641156347, guid: f37ed2ff8ba47004582f6233668f2347,
         type: 3}
       propertyPath: m_LocalPosition.x
