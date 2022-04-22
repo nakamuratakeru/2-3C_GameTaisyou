@@ -21,7 +21,7 @@ public class GClearcanvas : MonoBehaviour
        
           step_time += Time.deltaTime;
             //Debug.Log("計測中");
-            if (step_time >=110.0f && gc < 1)　//プレイ開始から30秒経過するとゲームクリアパネルが表示される。
+            if (step_time >=5.0f && gc < 1)　//プレイ開始から30秒経過するとゲームクリアパネルが表示される。
             {
                 Debug.Log("ゲームクリア！");
                 clearflg = true;
