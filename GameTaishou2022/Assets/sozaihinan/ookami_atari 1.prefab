@@ -21,6 +21,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8959375740514730273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371099158315123338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf0fecabe2cbde41a13dbb38e1efa86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoint: 5
 --- !u!1 &4494729889948013348
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +46,6 @@ GameObject:
   - component: {fileID: 1720192928398608728}
   - component: {fileID: 6408678336637418762}
   - component: {fileID: 3054551743124459419}
-  - component: {fileID: 3452022157797010907}
   m_Layer: 0
   m_Name: ookami_atari 1
   m_TagString: Untagged
@@ -138,19 +150,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3452022157797010907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4494729889948013348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf0fecabe2cbde41a13dbb38e1efa86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damagePoint: 5
 --- !u!1001 &2062370587048073843
 PrefabInstance:
   m_ObjectHideFlags: 0
