@@ -173,6 +173,19 @@ MonoBehaviour:
   notesSpeed: 0.08
   startPos: {x: 0, y: 0}
   judgePos: {x: 0, y: 0}
+--- !u!114 &1999188301253976096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676721016856958816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf0fecabe2cbde41a13dbb38e1efa86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoint: 5
 --- !u!1001 &3079762724924149657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,6 +270,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f37ed2ff8ba47004582f6233668f2347, type: 3}
+--- !u!1 &2676721016856958816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1123679394641156345, guid: f37ed2ff8ba47004582f6233668f2347,
+    type: 3}
+  m_PrefabInstance: {fileID: 3079762724924149657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2676721016856958818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1123679394641156347, guid: f37ed2ff8ba47004582f6233668f2347,
