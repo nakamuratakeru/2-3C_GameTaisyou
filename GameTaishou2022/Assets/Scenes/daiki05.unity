@@ -3097,7 +3097,8 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6329519489944955413, guid: de6271287b1cd694ea78ff5673fff586, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: de6271287b1cd694ea78ff5673fff586, type: 3}
 --- !u!1 &913935632
 GameObject:
