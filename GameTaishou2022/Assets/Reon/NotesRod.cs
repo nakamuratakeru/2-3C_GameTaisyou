@@ -19,6 +19,8 @@ public class NotesRod : MonoBehaviour
     public static bool bnotes;
     public static bool anotes;
     bool niceflg = false;
+    bool goodflg = false;
+    bool greatflg = false;
 
     public static bool Aflg;
     public static bool Bflg;
@@ -55,12 +57,32 @@ public class NotesRod : MonoBehaviour
 
     private void Score()
     {
-        score += 100;
+        if (niceflg == true)
+        {
+            score += 100;
+        }
+
+        if (goodflg == true)
+        {
+            score += 1000;
+        }
+
+        if (greatflg == true)
+        {
+            score += 10000;
+        }
+
+
     }
 
     private void Combo()
     {
         combo += 1;
+    }
+
+    private void rotate()
+    {
+        transform.Rotate(new Vector3(0.0f, 0.0f,0.5f));
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -91,9 +113,29 @@ public class NotesRod : MonoBehaviour
 
         if (other.gameObject.CompareTag("nice"))
         {
-            niceflg = true;
+            if (goodflg || greatflg == false)
+            {
+                niceflg = true;
+            }
             //perfect(red)  good(green) nice(bule) miss(white)
         }
+
+        if (other.gameObject.CompareTag("good"))
+        {
+            if (greatflg == false)
+            {
+                goodflg = true;
+            }
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
+        if (other.gameObject.CompareTag("great"))
+        {
+            greatflg = true;
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -118,13 +160,42 @@ public class NotesRod : MonoBehaviour
             anotes = false;
 
         }
+
+        if (other.gameObject.CompareTag("nice"))
+        {
+          
+                niceflg = false;
+            
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
+        if (other.gameObject.CompareTag("good"))
+        {
+           
+                goodflg = false;
+            
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
+        if (other.gameObject.CompareTag("great"))
+        {
+            greatflg = false;
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-      
+        Debug.LogFormat("nice",niceflg);
+        Debug.LogFormat("good", goodflg);
+        Debug.LogFormat("great", greatflg);
+
+        rotate();
 
         comboreset = ComboReset.comboreset;
 
