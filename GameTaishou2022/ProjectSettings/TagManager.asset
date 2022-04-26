@@ -16,6 +16,8 @@ TagManager:
   - AudioPlay
   - miss
   - Effect
+  - good
+  - great
   layers:
   - Default
   - TransparentFX
