@@ -39,6 +39,8 @@ public class NotesRod : MonoBehaviour
     public static int combo;
     bool comboreset;
 
+    bool ariasuflg = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +57,8 @@ public class NotesRod : MonoBehaviour
         Xflg = false;
 
         comboreset = false;
+
+
 
         //Ycolor = Y.GetComponent<Renderer>().material.color;
     }
@@ -95,6 +99,14 @@ public class NotesRod : MonoBehaviour
     private void rotate()
     {
         transform.Rotate(new Vector3(0.0f, 0.0f,0.5f));
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("AudioPlay"))
+        {
+            ariasuflg = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
