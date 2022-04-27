@@ -5,6 +5,8 @@ using UnityEngine;
 public class Attackanim : MonoBehaviour
 {
 
+    float Xtate_old;
+    float Xyoko_old;
     Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -41,15 +43,22 @@ public class Attackanim : MonoBehaviour
         float Xyoko_new = Input.GetAxisRaw("LT");
         float Xtate_new = Input.GetAxisRaw("RT");
 
-        if (Xtate_new == -1)
+       
+        if (Xtate_new == -1 && Xtate_old==0)
         { //Aボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("Aslash");
+            Debug.Log("RTキー");
         }
 
-        if (Xyoko_new == -1)
+        if (Xyoko_new == -1 && Xyoko_old==0)
         {　//Bボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("Bslash");
+            Debug.Log("LTキー");
         }
         // Xtate == -1
+        Xtate_old = Xtate_new;
+        Xyoko_old = Xyoko_new;
     }
 }
+
+
