@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1772413223920876958}
   - component: {fileID: 9126761152223166726}
   - component: {fileID: 209813803665882482}
+  - component: {fileID: 1218958898070456402}
   m_Layer: 0
   m_Name: hone_atari 1
   m_TagString: Untagged
@@ -166,6 +167,32 @@ MonoBehaviour:
   notesSpeed: 0.08
   startPos: {x: 0, y: 0}
   judgePos: {x: 0, y: 0}
+--- !u!61 &1218958898070456402
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157580410370104738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4375, y: 0.46875}
+    newSize: {x: 0.4375, y: 0.46875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!1001 &2355229497960694163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262,6 +289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2979
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971382234537664529, guid: f37ed2ff8ba47004582f6233668f2347,
+        type: 3}
+      propertyPath: m_TagString
+      value: nice2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f37ed2ff8ba47004582f6233668f2347, type: 3}

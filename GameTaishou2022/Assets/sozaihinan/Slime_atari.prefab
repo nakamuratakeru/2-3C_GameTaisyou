@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6805984533018206146}
   - component: {fileID: 3569654729590427218}
   - component: {fileID: 8795048526741645285}
+  - component: {fileID: 3425255285579898023}
   m_Layer: 0
   m_Name: Slime_atari
   m_TagString: AudioPlay
@@ -146,6 +147,32 @@ MonoBehaviour:
   notesSpeed: 0.08
   startPos: {x: 0, y: 0}
   judgePos: {x: 0, y: 0}
+--- !u!61 &3425255285579898023
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078886027829899810}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.265625, y: 1.15625}
+    newSize: {x: 1.265625, y: 1.15625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!50 &6038050569792473412
 Rigidbody2D:
   serializedVersion: 4
@@ -258,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.6740415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971382234537664529, guid: f37ed2ff8ba47004582f6233668f2347,
+        type: 3}
+      propertyPath: m_TagString
+      value: nice2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f37ed2ff8ba47004582f6233668f2347, type: 3}

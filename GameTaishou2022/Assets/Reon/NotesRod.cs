@@ -19,12 +19,16 @@ public class NotesRod : MonoBehaviour
     public static bool bnotes;
     public static bool anotes;
     bool niceflg = false;
+    bool niceflg2 = false;
     bool goodflg = false;
     bool greatflg = false;
 
     public static bool Aflg;
     public static bool Bflg;
     public static bool Xflg;
+
+    float Xtatebefor;
+    float Xyokobefor;
 
     float x_val;
     public float speed;
@@ -62,6 +66,13 @@ public class NotesRod : MonoBehaviour
             score += 100;
         }
 
+        if (niceflg2 == true)
+        {
+            score += 100;
+        }
+
+
+
         if (goodflg == true)
         {
             score += 1000;
@@ -70,6 +81,7 @@ public class NotesRod : MonoBehaviour
         if (greatflg == true)
         {
             score += 10000;
+            Debug.Log("great");
         }
 
 
@@ -120,6 +132,15 @@ public class NotesRod : MonoBehaviour
             //perfect(red)  good(green) nice(bule) miss(white)
         }
 
+        if (other.gameObject.CompareTag("nice2"))
+        {
+            if (goodflg || greatflg == false)
+            {
+                niceflg2 = true;
+            }
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
         if (other.gameObject.CompareTag("good"))
         {
             if (greatflg == false)
@@ -131,7 +152,10 @@ public class NotesRod : MonoBehaviour
 
         if (other.gameObject.CompareTag("great"))
         {
-            greatflg = true;
+            if (niceflg || niceflg2 == true)
+            {
+                greatflg = true;
+            }
             //perfect(red)  good(green) nice(bule) miss(white)
         }
 
@@ -169,6 +193,14 @@ public class NotesRod : MonoBehaviour
             //perfect(red)  good(green) nice(bule) miss(white)
         }
 
+        if (other.gameObject.CompareTag("nice2"))
+        {
+
+            niceflg2 = false;
+
+            //perfect(red)  good(green) nice(bule) miss(white)
+        }
+
         if (other.gameObject.CompareTag("good"))
         {
            
@@ -191,9 +223,6 @@ public class NotesRod : MonoBehaviour
     void Update()
     {
 
-        Debug.LogFormat("nice",niceflg);
-        Debug.LogFormat("good", goodflg);
-        Debug.LogFormat("great", greatflg);
 
         rotate();
 
@@ -269,20 +298,20 @@ public class NotesRod : MonoBehaviour
             Bflg = false;
         }
 
-        if (Xyoko==-1)
+        if (Xyoko<0&&Xyokobefor==0.0f)
         {
-            Bflg = true;
-            B.GetComponent<Renderer>().material.color = Color.red;
-            if (bnotes == true)
-            {
-                
-              
-                //Bnotes.SetActive(false);
-                Destroy(Bnotes.gameObject.transform.root.gameObject);
-                bnotes = false;
-                Score();
-                Combo();
-            }
+                Bflg = true;
+                B.GetComponent<Renderer>().material.color = Color.red;
+                if (bnotes == true)
+                {
+
+
+                    //Bnotes.SetActive(false);
+                    Destroy(Bnotes.gameObject.transform.root.gameObject);
+                    bnotes = false;
+                    Score();
+                    Combo();
+                }
         }
         else if (Xyoko==0)
         {
@@ -311,7 +340,7 @@ public class NotesRod : MonoBehaviour
             Aflg = false;
         }
 
-        if (Xtate==-1)
+        if (Xtate==-1&&Xtatebefor==0)
         {
             Aflg = true;
             A.GetComponent<Renderer>().material.color = Color.red;
@@ -331,5 +360,8 @@ public class NotesRod : MonoBehaviour
             A.GetComponent<Renderer>().material.color = Color.blue;
             Aflg = false;
         }
+
+        Xtatebefor = Xtate;
+        Xyokobefor = Xyoko;
     }
 }
