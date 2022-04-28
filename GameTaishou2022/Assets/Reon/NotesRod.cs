@@ -68,11 +68,13 @@ public class NotesRod : MonoBehaviour
         if (niceflg == true)
         {
             score += 100;
+            Debug.Log("NICE");
         }
 
         if (niceflg2 == true)
         {
             score += 100;
+            Debug.Log("NICE2");
         }
 
 
@@ -80,6 +82,7 @@ public class NotesRod : MonoBehaviour
         if (goodflg == true)
         {
             score += 1000;
+            Debug.Log("good");
         }
 
         if (greatflg == true)
@@ -137,20 +140,18 @@ public class NotesRod : MonoBehaviour
 
         if (other.gameObject.CompareTag("nice"))
         {
-            if (goodflg || greatflg == false)
+            if (goodflg && greatflg && niceflg2== false)
             {
                 niceflg = true;
             }
-            //perfect(red)  good(green) nice(bule) miss(white)
         }
 
         if (other.gameObject.CompareTag("nice2"))
         {
-            if (goodflg || greatflg == false)
+            if (goodflg && greatflg&&niceflg == false)
             {
                 niceflg2 = true;
             }
-            //perfect(red)  good(green) nice(bule) miss(white)
         }
 
         if (other.gameObject.CompareTag("good"))
@@ -159,16 +160,14 @@ public class NotesRod : MonoBehaviour
             {
                 goodflg = true;
             }
-            //perfect(red)  good(green) nice(bule) miss(white)
         }
 
         if (other.gameObject.CompareTag("great"))
         {
-            if (niceflg || niceflg2 == true)
+            if (niceflg && niceflg2 == true)
             {
                 greatflg = true;
             }
-            //perfect(red)  good(green) nice(bule) miss(white)
         }
 
 
@@ -202,7 +201,7 @@ public class NotesRod : MonoBehaviour
           
                 niceflg = false;
             
-            //perfect(red)  good(green) nice(bule) miss(white)
+
         }
 
         if (other.gameObject.CompareTag("nice2"))
@@ -210,7 +209,7 @@ public class NotesRod : MonoBehaviour
 
             niceflg2 = false;
 
-            //perfect(red)  good(green) nice(bule) miss(white)
+ 
         }
 
         if (other.gameObject.CompareTag("good"))
@@ -218,13 +217,13 @@ public class NotesRod : MonoBehaviour
            
                 goodflg = false;
             
-            //perfect(red)  good(green) nice(bule) miss(white)
+   
         }
 
         if (other.gameObject.CompareTag("great"))
         {
             greatflg = false;
-            //perfect(red)  good(green) nice(bule) miss(white)
+
         }
 
 
