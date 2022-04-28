@@ -2333,9 +2333,8 @@ MonoBehaviour:
     type: 3}
   notesPre3: {fileID: 7157580410370104738, guid: 5027d68a442fff942b327344d56ade94,
     type: 3}
-  notes: {fileID: 1016616499}
-  note2: {fileID: 1484673174}
-  note3: {fileID: 187555560}
+  audioPre: {fileID: 7587156464257593370, guid: a3361b9e723e62b4eaf7b74175fafc38,
+    type: 3}
   gameAudio: {fileID: 8770100545412602286, guid: c08fdcdfcce700e48a753f5228408d83,
     type: 3}
 --- !u!4 &728998083
