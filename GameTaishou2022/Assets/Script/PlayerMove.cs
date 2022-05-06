@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-
+    float Xtate_old;
+    float Xyoko_old;
     Animator animator;
   
 
@@ -58,7 +59,7 @@ public class PlayerMove : MonoBehaviour
 
 
 
-        if (Xtate_new == -1)
+        if (Xtate_new == -1 && Xtate_old == 0)
         { //Aボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
             Debug.Log("下キー(A)で攻撃！");
@@ -66,12 +67,14 @@ public class PlayerMove : MonoBehaviour
            
         }
 
-        if (Xyoko_new == -1)
+        if (Xyoko_new == -1 && Xyoko_old == 0)
         {　//Bボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
             Debug.Log("左キー(B)で攻撃！");
           
         }
         // Xtate == -1
+        Xtate_old = Xtate_new;
+        Xyoko_old = Xyoko_new;
     }
 }

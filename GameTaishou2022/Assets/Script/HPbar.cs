@@ -30,22 +30,22 @@ public class HPbar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
 
-        int damage = 20;
+    //    int damage = 20;
 
-        if (Input.GetKeyDown("space")) //スペースキーを押したら
-        {
+    //    if (Input.GetKeyDown("space")) //スペースキーを押したら
+    //    {
 
-            slider.value = slider.value - damage;
-            Debug.Log("ダメージ");
+    //        slider.value = slider.value - damage;
+    //        Debug.Log("ダメージ");
 
-            //slider.value = (float)currentHp / (float)maxHp;
+    //        //slider.value = (float)currentHp / (float)maxHp;
            
-        }
+    //    }
 
-    }
+    //}
     public void SetHp(int HP)
     {
         slider.value =HP;
