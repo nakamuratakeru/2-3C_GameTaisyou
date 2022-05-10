@@ -12,12 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Asobikata.unity
     guid: 52a1755b2c0e8c645a3884c7b9e20076
   - enabled: 1
-    path: Assets/Scenes/MyMenu1.unity
-    guid: 334c1470d57806643ada8dc517ea3adb
-  - enabled: 0
-    path: Assets/Scenes/FadeSceneS/StageSelect.unity
-    guid: 82f423c373426384289109d028730c33
-  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
