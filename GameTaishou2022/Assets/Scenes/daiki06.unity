@@ -2338,9 +2338,7 @@ MonoBehaviour:
     type: 3}
   notesPre3: {fileID: 7157580410370104738, guid: 5027d68a442fff942b327344d56ade94,
     type: 3}
-  notes: {fileID: 1016616499}
-  note2: {fileID: 1484673174}
-  note3: {fileID: 187555560}
+  audioPre: {fileID: 0}
   gameAudio: {fileID: 8770100545412602286, guid: c08fdcdfcce700e48a753f5228408d83,
     type: 3}
 --- !u!4 &728998083
@@ -3209,6 +3207,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976701604}
   m_CullTransparentMesh: 0
+--- !u!1 &997430117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6819066560100686971, guid: 5b7cc15d43e76a24ab4bf9826abbcc38,
+    type: 3}
+  m_PrefabInstance: {fileID: 764564391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &997430121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997430117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b8d76c4ddbc7346b1242ac3047b93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1016616498
 GameObject:
   m_ObjectHideFlags: 0
