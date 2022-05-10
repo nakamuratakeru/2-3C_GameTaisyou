@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class NoteMove : MonoBehaviour
-{
+public class NoteMove : MonoBehaviour {
     [SerializeField]
     private float notesSpeed;
+
+    //public Vector2 Vector2;
 
     [SerializeField]
     private Vector2 startPos;//ノーツの開始位置
@@ -17,24 +18,36 @@ public class NoteMove : MonoBehaviour
 
     private float notesTime;
 
-    void Start()
-    {
+
+
+
+    void Start() {
         notesTime = (startPos.x - judgePos.x) / notesSpeed;
         InvokeRepeating("NotesMove", 0, moveSpan);
     }
 
-    void NotesMove()
-    {
+    void NotesMove() {
         transform.position += new Vector3(-notesSpeed, 0f, 0f);
         notesTime -= moveSpan;
-        NotesJudge();
+        //NotesJudge();
     }
 
-    void NotesJudge()
-    {
-        if (Math.Abs(notesTime) < 0.5f)
-        {
+
+    void NotesJudge() {
+
+        if (Math.Abs(notesTime) < 0.5f) {
             //判定した時の処理を書く 
+
+            Debug.Log("hit");
         }
+        else if (this.gameObject.tag == "AudioPlay") {
+            if (notesTime < 0) {    //判定位置に来たら
+                NotesGenerator.isAudioPlay = true;
+                Debug.Log("sfjkajjgpagj");
+            }
+        }
+
     }
+
 }
+

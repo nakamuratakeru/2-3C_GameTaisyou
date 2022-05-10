@@ -9,8 +9,8 @@ public class NotesGenerator : MonoBehaviour {
         //public Notes[] notes2;
         //public Notes[] notes3;
         public int BPM;
-       
-       
+
+
     }
 
     [Serializable]
@@ -18,9 +18,9 @@ public class NotesGenerator : MonoBehaviour {
         public int num;
         public int block;
         public int LPB;
-       
+
     }
-   
+
     [SerializeField]
     private GameObject notesPre;
     [SerializeField]
@@ -28,14 +28,16 @@ public class NotesGenerator : MonoBehaviour {
     [SerializeField]
     private GameObject notesPre3;
     [SerializeField]
-    Transform notes;
-    [SerializeField] 
-    Transform note2;
-    [SerializeField]
-    Transform note3;
+    private GameObject audioPre;
+    //[SerializeField]
+    //Transform notes;
+    //[SerializeField] 
+    //Transform note2;
+    //[SerializeField]
+    //Transform note3;
     [SerializeField]
     private AudioSource gameAudio;
-
+    //AudioSource audio = GetComponent<AudioSource>();
 
     public static bool isAudioPlay = false;
 
@@ -52,11 +54,24 @@ public class NotesGenerator : MonoBehaviour {
     private int[] scoreBlock;//ノーツの種類を順に入れる
     private int BPM;
     private int LPB;
+
+    //private int a = new Vector2(1.234f, 5.678f);
+
+    //void Start() {
+    //    gameAudio = GetComponent<AudioSource>();
+    //}
+
+   
    
 
 
+    ////音再生開始
+    //void AudioPlay() {
+    //    gameAudio.enabled = isAudioPlay;
+    //       //a.Play();
+    //    }
 
-    void Awake() {
+        void Awake() {
         MusicReading();
         InvokeRepeating("NotesIns", 0f, moveSpan);
     }
@@ -97,23 +112,20 @@ public class NotesGenerator : MonoBehaviour {
         if (isBeat) {
             //ノーツ0の生成
             if (scoreBlock[beatCount] == 0) {
-                
+                Instantiate(audioPre, new Vector2(7.68f, -3.46f), Quaternion.identity);
             }
 
-            //音再生開始
-            void AudioPlay() {
-                gameAudio.enabled = isAudioPlay;
-            }
+            
 
             //ノーツ1の生成
             if (scoreBlock[beatCount] == 1) {
-                Instantiate(notesPre,notes);
+                Instantiate(notesPre, new Vector2(7.68f, -3.46f), Quaternion.identity);
             }
             else if (scoreBlock[beatCount] == 2) {
-                Instantiate(notesPre2,note2);
+                Instantiate(notesPre2, new Vector2(7.68f, -2.35f), Quaternion.identity);
             }
             else if (scoreBlock[beatCount] == 3) {
-                Instantiate(notesPre3,note3);
+                Instantiate(notesPre3, new Vector2(7.68f, -0.77f), Quaternion.identity);
             }
 
             beatCount++; //(5)
@@ -141,5 +153,13 @@ public class NotesGenerator : MonoBehaviour {
 
     }
 
-
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("AudioPlay")) {
+            isAudioPlay = true;
+            Debug.Log("H");
+            if (isAudioPlay == true) {
+                gameAudio.Play();
+            }
+        }
+    }
 }
