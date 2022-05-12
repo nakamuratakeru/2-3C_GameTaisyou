@@ -9,9 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: f9e65e0d9df1eee438a2988e1c648721
   - enabled: 1
+    path: Assets/Scenes/MyMenu1.unity
+    guid: 334c1470d57806643ada8dc517ea3adb
+  - enabled: 0
     path: Assets/Scenes/Asobikata.unity
     guid: 52a1755b2c0e8c645a3884c7b9e20076
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 1d0e28a9cd59148418d9dbf65ad78f49
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/FadeSceneS/StageSelect.unity
+    guid: 82f423c373426384289109d028730c33
+  - enabled: 1
+    path: Assets/Scenes/FadeSceneS/EyeCatching.unity
+    guid: 6dddd400270a8c34198f646c7d76cffa
+  - enabled: 1
+    path: Assets/Scenes/FadeSceneS/KARIScene.unity
+    guid: 84d379f417731af4181e661b505d569d
   m_configObjects: {}
