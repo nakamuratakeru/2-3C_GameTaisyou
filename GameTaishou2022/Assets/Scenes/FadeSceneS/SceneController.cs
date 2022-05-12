@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
 {
     public GameObject fadeCanvas;//操作するCanvas、タグで探す
     public GameObject fade;
+    private float step_time;
 
     void Start()
     {
@@ -16,6 +17,17 @@ public class SceneController : MonoBehaviour
             Instantiate(fade);
         }
         Invoke("findFadeObject", 0.02f);//起動時用にCanvasの召喚をちょっと待つ
+
+        step_time = 0.0f;
+    }
+    void Update()
+    {
+        step_time += Time.deltaTime;
+
+        if (step_time >= 5.0f)
+        {
+            SceneManager.LoadScene("KARIScene");
+        }
     }
 
     void findFadeObject()
@@ -29,5 +41,6 @@ public class SceneController : MonoBehaviour
         fadeCanvas.GetComponent<FadeManager>().fadeOut();//フェードアウトフラグを立てる
         await Task.Delay(200);//暗転するまで待つ
         SceneManager.LoadScene("EyeCatching");//シーンチェンジ
+
     }
 }

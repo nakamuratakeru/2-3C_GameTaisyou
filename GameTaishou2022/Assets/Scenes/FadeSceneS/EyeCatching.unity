@@ -175,7 +175,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -690385011
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d09985a53c2e7cb429a3bcef71872106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,7 +256,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -464754647
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 875adb6f5382fe24d856bf87fa02d601, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -447,7 +447,7 @@ MonoBehaviour:
   isFadeIn: 1
   isFadeOut: 1
   alpha: 1
-  fadeSpeed: 5
+  fadeSpeed: 2.5
 --- !u!1 &1448453655
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +696,8 @@ PrefabInstance:
         type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7991074882029888631, guid: 63f56a4535567c8438d6d131cda69c3e,
+        type: 3}
     - target: {fileID: 1361171924242870737, guid: 46c10a14211e38748af3674bce79e4c4,
         type: 3}
       propertyPath: m_Name
@@ -826,5 +827,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6612572425928493106, guid: 73e9e82028038b84d82741d814b8a37d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73e9e82028038b84d82741d814b8a37d, type: 3}

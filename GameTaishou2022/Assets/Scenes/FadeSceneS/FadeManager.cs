@@ -35,6 +35,8 @@ public class FadeManager : MonoBehaviour
             {
                 isFadeIn = false;
                 alpha = 0.0f;
+
+
             }
             this.GetComponentInChildren<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);
         }
@@ -45,6 +47,8 @@ public class FadeManager : MonoBehaviour
             {
                 isFadeOut = false;
                 alpha = 1.0f;
+
+
             }
             this.GetComponentInChildren<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);
         }
