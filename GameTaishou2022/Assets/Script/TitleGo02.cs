@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class TitleGo02: MonoBehaviour
 {
-    public static bool t = false;
+    public static bool titleflg = false;
     public void Title()
     {
         SceneManager.LoadScene("Title");
-
-        t = true;
     }
 }
 
