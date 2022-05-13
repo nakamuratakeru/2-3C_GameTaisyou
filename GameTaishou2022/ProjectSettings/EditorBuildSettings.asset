@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FadeSceneS/KARIScene.unity
     guid: 84d379f417731af4181e661b505d569d
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: 21d9c10b06e2e984f8773e00b910b56f
   m_configObjects: {}

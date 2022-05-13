@@ -37,6 +37,7 @@ public class NotesRod : MonoBehaviour
 
     public static int score;
     public static int combo;
+    public static int maxcombo;
     bool comboreset;
 
     bool ariasuflg = false;
@@ -44,6 +45,8 @@ public class NotesRod : MonoBehaviour
     public static bool nicetxflg;
     public static bool goodtxflg;
     public static bool greattxflg;
+
+    bool greattrueflg = false;
 
     // Start is called before the first frame update
     void Start()
@@ -71,19 +74,22 @@ public class NotesRod : MonoBehaviour
     {
         if (niceflg || niceflg2 == true && goodflg  == false)
         {
-            nicetxflg = true;
-            score += 100;
-            Debug.Log("NICE");
+            if (greattrueflg == false&&goodflg==false)
+            {
+                nicetxflg = true;
+                score += 100;
+                Debug.Log("NICE");
+            }
         }
         else
         {
             nicetxflg = false;
         }
 
-        if (goodflg == true&&greatflg==false)
+        if (goodflg == true&&greattrueflg==false)
         {
             goodtxflg = true;
-            score += 1000;
+            score += 200;
             Debug.Log("good");
         }
 
@@ -96,13 +102,18 @@ public class NotesRod : MonoBehaviour
 
         if (greatflg&&niceflg && niceflg2 == true&& goodflg==false)
         {
-            greattxflg = true;
-            score += 10000;
-            Debug.Log("great");
+            greattrueflg = true;
+            if (greattrueflg == true)
+            {
+                greattxflg = true;
+                score += 300;
+                Debug.Log("great");
+            }
         }
 
         else
         {
+            greattrueflg = false;
             greattxflg = false;
         }
 
@@ -112,6 +123,11 @@ public class NotesRod : MonoBehaviour
     private void Combo()
     {
         combo += 1;
+
+        if (combo >= maxcombo)
+        {
+            maxcombo = combo;
+        }
 
         if (GClearcanvas.clearflg == true)
         {
