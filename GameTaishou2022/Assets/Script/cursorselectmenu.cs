@@ -53,7 +53,7 @@ public class cursorselectmenu : MonoBehaviour
         else if (Input.GetKeyDown("joystick button 0") && Iz == 1)
         {
             //Stage2へ移動
-            SceneManager.LoadScene("Asobikata");
+            SceneManager.LoadScene("Menu");
 
             //Time.timeScale = 1;
 

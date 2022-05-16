@@ -18,10 +18,10 @@ public class NotesRod : MonoBehaviour
     public static bool xnotes;
     public static bool bnotes;
     public static bool anotes;
-    bool niceflg = false;
+    public static bool niceflg = false;
     bool niceflg2 = false;
-    bool goodflg = false;
-    bool greatflg = false;
+    public static bool goodflg = false;
+    public static bool greatflg = false;
 
     public static bool Aflg;
     public static bool Bflg;
@@ -37,9 +37,16 @@ public class NotesRod : MonoBehaviour
 
     public static int score;
     public static int combo;
+    public static int maxcombo;
     bool comboreset;
 
     bool ariasuflg = false;
+
+    public static bool nicetxflg;
+    public static bool goodtxflg;
+    public static bool greattxflg;
+
+    bool greattrueflg = false;
 
     // Start is called before the first frame update
     void Start()
@@ -65,30 +72,49 @@ public class NotesRod : MonoBehaviour
 
     private void Score()
     {
-        if (niceflg == true)
+        if (niceflg || niceflg2 == true && goodflg  == false)
         {
-            score += 100;
-            Debug.Log("NICE");
+            if (greattrueflg == false&&goodflg==false)
+            {
+                nicetxflg = true;
+                score += 100;
+                Debug.Log("NICE");
+            }
+        }
+        else
+        {
+            nicetxflg = false;
         }
 
-        if (niceflg2 == true)
+        if (goodflg == true&&greattrueflg==false)
         {
-            score += 100;
-            Debug.Log("NICE2");
-        }
-
-
-
-        if (goodflg == true)
-        {
-            score += 1000;
+            goodtxflg = true;
+            score += 200;
             Debug.Log("good");
         }
 
-        if (greatflg == true)
+        else
         {
-            score += 10000;
-            Debug.Log("great");
+            goodtxflg = false;
+        }
+
+  
+
+        if (greatflg&&niceflg && niceflg2 == true&& goodflg==false)
+        {
+            greattrueflg = true;
+            if (greattrueflg == true)
+            {
+                greattxflg = true;
+                score += 300;
+                Debug.Log("great");
+            }
+        }
+
+        else
+        {
+            greattrueflg = false;
+            greattxflg = false;
         }
 
 
@@ -97,6 +123,17 @@ public class NotesRod : MonoBehaviour
     private void Combo()
     {
         combo += 1;
+
+        if (combo >= maxcombo)
+        {
+            maxcombo = combo;
+        }
+
+        if (GClearcanvas.clearflg == true)
+        {
+            score = 0;
+            combo = 0;
+        }
     }
 
     private void rotate()
@@ -140,34 +177,26 @@ public class NotesRod : MonoBehaviour
 
         if (other.gameObject.CompareTag("nice"))
         {
-            if (goodflg && greatflg && niceflg2== false)
-            {
-                niceflg = true;
-            }
+            niceflg = true;
+           
         }
 
         if (other.gameObject.CompareTag("nice2"))
         {
-            if (goodflg && greatflg&&niceflg == false)
-            {
+            
                 niceflg2 = true;
-            }
+            
         }
 
         if (other.gameObject.CompareTag("good"))
         {
-            if (greatflg == false)
-            {
-                goodflg = true;
-            }
+            goodflg = true;
         }
 
         if (other.gameObject.CompareTag("great"))
         {
-            if (niceflg && niceflg2 == true)
-            {
-                greatflg = true;
-            }
+            greatflg = true;
+            goodflg = false;
         }
 
 
@@ -199,7 +228,8 @@ public class NotesRod : MonoBehaviour
         if (other.gameObject.CompareTag("nice"))
         {
           
-                niceflg = false;
+            niceflg = false;
+            nicetxflg = false;
             
 
         }
@@ -208,6 +238,7 @@ public class NotesRod : MonoBehaviour
         {
 
             niceflg2 = false;
+            nicetxflg = false;
 
  
         }
@@ -215,14 +246,15 @@ public class NotesRod : MonoBehaviour
         if (other.gameObject.CompareTag("good"))
         {
            
-                goodflg = false;
-            
+             goodflg = false;
+            goodtxflg = false;
    
         }
 
         if (other.gameObject.CompareTag("great"))
         {
             greatflg = false;
+            greattxflg = false;
 
         }
 
@@ -233,8 +265,10 @@ public class NotesRod : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        if (niceflg == true)
+        {
+            Debug.Log("nice");
+        }
         rotate();
 
         comboreset = ComboReset.comboreset;
@@ -342,7 +376,6 @@ public class NotesRod : MonoBehaviour
                 anotes = false;
                 Score();
                 Combo();
-
             }
         }
         else if (Input.GetButtonUp("joystick button 0"))
