@@ -13,15 +13,18 @@ public class HPbar : MonoBehaviour
     private float step_time; //ゲームプレイ中の経過時間をカウントする
     //public int currentHp;
     Slider slider;
-    public int dPoint = 0;
-    public int gc = 0;
+    public static  int dPoint = 0;
+    public static  int gc = 0;
+    public static int rf = 0; //リセットフラグをfalseにする処理が複数起こるのを防ぐ為作成した関数
     public static bool clearflg = false;
+    public static bool overflg = false;
     //bool pushFlag = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        step_time = 0.0f;       // 経過時間初期化
+        step_time = 0.0f;
+        Debug.Log("経過時間初期化");// 経過時間初期化
         GameclearCanvas.SetActive(false);
         overPanel.SetActive(false);
         //slider = GameObject.FindWithTag("HPslider").GetComponent<Slider>();
@@ -45,15 +48,30 @@ public class HPbar : MonoBehaviour
         if (Title.Startkettei == true)
         {
             clearflg = false;
+            overflg = false;
+            dPoint = 0;
+            gc = 0;
+            resultbgmcont.gCsound = 0;
+            resultbgmcont.gOsound = 0;
+            Debug.Log("リセット");
         }
-
+        if (rf<1&&step_time >= 1.0f)
+        {
+            Title.resetflg = false;
+            Debug.Log("リセットフラグ発動");
+            rf += 1;
+        }
+        //if (overflg == true)
+        //{
+        //    Debug.Log("trueのまま");
+        //}
         int damage = 10;
         step_time += Time.deltaTime;
-        if (clearflg == true)
-        {
-            Debug.Log("trueのまま");
-        }
-        if (Input.GetKeyDown("space")) //スペースキーを押したら
+        //if (clearflg == true)
+        //{
+        //    Debug.Log("trueのまま");
+        //}
+        if (Input.GetKeyDown(KeyCode.Return)) //エンターキーを押したら10ダメージ受ける(デバッグ用)
         {
 
             slider.value = slider.value - damage;
@@ -62,17 +80,18 @@ public class HPbar : MonoBehaviour
             //slider.value = (float)currentHp / (float)maxHp;
 
         }
-        if (gc<=0&&slider.value == 0 && dPoint<=1)
+        if (gc<=0&&slider.value == 0 && dPoint<=1)//hpが0になるとゲームオーバーパネルが表示される
         {
             
             dPoint += 1;
+            overflg = true;
             overPanel.SetActive(true);
             Debug.Log("ゲームオーバー");
 
            
 
         }
-        if (dPoint<=0&&step_time >= 10.0f && gc < 1) //プレイ開始から30秒経過するとゲームクリアパネルが表示される。
+        if (dPoint<=0&&step_time >=20.0f && gc < 1) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
         {
             Debug.Log("ゲームクリア！");
             clearflg = true;

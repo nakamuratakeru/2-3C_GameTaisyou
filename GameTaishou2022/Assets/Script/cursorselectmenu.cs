@@ -10,16 +10,18 @@ public class cursorselectmenu : MonoBehaviour
     public int Iz = 0;
     public int i = 0;
 
-    //private AudioSource audio;
 
-    //[SerializeField]
-    //public AudioClip sound;
-    //public AudioClip sound2;
+    private AudioSource audio;
 
+    [SerializeField]
+    public AudioClip sound;
+    public AudioClip sound2;
+
+    
     //スタート関数
     void Start()
     {
-        //audio = gameObject.AddComponent<AudioSource>();
+        audio = gameObject.AddComponent<AudioSource>();
     }
 
     //アップデート関数
@@ -43,30 +45,60 @@ public class cursorselectmenu : MonoBehaviour
 
         if (Input.GetKeyDown("joystick button 0") && Iz == 0)
         {
-            //Stage1へ移動
+            //ゲームシーンへ移動
+          
+            audio.PlayOneShot(sound);
             SceneManager.LoadScene("SampleScene");
-            //Time.timeScale = 1;
-
-            //audio.PlayOneShot(sound2);
+            Debug.Log("ゲームへ");
+            if (Title.resetflg == true)
+            {
+                NotesRod.score = 0;
+                NotesRod.combo = 0;
+                NotesRod.maxcombo = 0;
+                //StartCoroutine("GameStart");
+                
+            }
+           
 
         }
         else if (Input.GetKeyDown("joystick button 0") && Iz == 1)
         {
-            //Stage2へ移動
-            SceneManager.LoadScene("Menu");
+            
+            audio.PlayOneShot(sound);
+            StartCoroutine("Asobikata");
 
-            //Time.timeScale = 1;
-
-            //audio.PlayOneShot(sound2);
 
         }
         else if (Input.GetKeyDown("joystick button 0") && Iz == 2)
         {
-            //Stage4へ移動
-            SceneManager.LoadScene("Title");
-            //audio.PlayOneShot(sound2);
+            
+            audio.PlayOneShot(sound);
+            StartCoroutine("Titlego");
+          
         }
 
+    }
+
+    //IEnumerator GameStart()
+    //{
+
+
+    //    yield return new WaitForSecondsRealtime(0.5f);
+    //    SceneManager.LoadScene("SampleScene");
+
+    //}
+    IEnumerator Asobikata()
+    {
+
+
+        yield return new WaitForSecondsRealtime(0.5f);
+        SceneManager.LoadScene("Menu");
+
+    }
+    IEnumerator Titlego()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        SceneManager.LoadScene("Title");
     }
 
     public void Puro()
@@ -76,25 +108,25 @@ public class cursorselectmenu : MonoBehaviour
         {
             transform.position += new Vector3(264, 0, 0);
             Iz = 1;
-            //audio.PlayOneShot(sound);
+            audio.PlayOneShot(sound2);
         }
         else if (x == +1 && Iz == 1)
         {
             transform.position += new Vector3(232, 0, 0);
             Iz = 2;
-            //audio.PlayOneShot(sound);
+            audio.PlayOneShot(sound2);
         }
         else if (x == -1 && Iz == 2)
         {
             transform.position += new Vector3(-232, 0, 0);
             Iz = 1;
-            //audio.PlayOneShot(sound);
+            audio.PlayOneShot(sound2);
         }
         else if (x == -1 && Iz == 1)
         {
             transform.position += new Vector3(-264, 0, 0);
             Iz = 0;
-            //audio.PlayOneShot(sound);
+            audio.PlayOneShot(sound2);
         }
     }
 }

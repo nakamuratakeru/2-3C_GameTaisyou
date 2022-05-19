@@ -190,9 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'PRESS "A"
-
-    START'
+  m_Text: "A\u30DC\u30BF\u30F3\u3067\n\u30E1\u30CB\u30E5\u30FC\u3078"
 --- !u!222 &242461924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -243,9 +241,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d1339dc8254d0f4db8064c8c0667b7c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1cb548971ea3da541a2bc2438d73648a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.185
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -551,9 +549,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'PRESS "B"
-
-    SHUT DOWN'
+  m_Text: "\uFF22\u30DC\u30BF\u30F3\u3067\n\u30B7\u30E3\u30C3\u30C8\u30C0\u30A6\u30F3"
 --- !u!222 &580283617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -826,6 +822,50 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_EffectDistance: {x: 4, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &1412356264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412356265}
+  - component: {fileID: 1412356266}
+  m_Layer: 0
+  m_Name: title001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1412356265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412356264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06, y: -4.93, z: -1488.0996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412356266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412356264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1060f19f7d6548801ec0a7c95a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 8273b62e4e65c1d44afad1b3db5247e8, type: 3}
 --- !u!1 &1519927554
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +878,6 @@ GameObject:
   - component: {fileID: 1519927558}
   - component: {fileID: 1519927557}
   - component: {fileID: 1519927556}
-  - component: {fileID: 1519927555}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -846,18 +885,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1519927555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519927554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab1060f19f7d6548801ec0a7c95a2f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1519927556
 MonoBehaviour:
   m_ObjectHideFlags: 0
