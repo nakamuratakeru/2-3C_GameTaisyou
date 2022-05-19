@@ -18,8 +18,7 @@ public class HPbar : MonoBehaviour
     public static int rf = 0; //リセットフラグをfalseにする処理が複数起こるのを防ぐ為作成した関数
     public static bool clearflg = false;
     public static bool overflg = false;
-    //bool pushFlag = false;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -61,25 +60,10 @@ public class HPbar : MonoBehaviour
             Debug.Log("リセットフラグ発動");
             rf += 1;
         }
-        //if (overflg == true)
-        //{
-        //    Debug.Log("trueのまま");
-        //}
-        int damage = 10;
+        
+        
         step_time += Time.deltaTime;
-        //if (clearflg == true)
-        //{
-        //    Debug.Log("trueのまま");
-        //}
-        //if (Input.GetKeyDown(KeyCode.Return)) //エンターキーを押したら10ダメージ受ける(デバッグ用)
-        //{
-
-        //    slider.value = slider.value - damage;
-        //    Debug.Log("ダメージ");
-
-        //    //slider.value = (float)currentHp / (float)maxHp;
-
-        //}
+        
         if (gc<=0&&slider.value == 0 && dPoint<=1)//hpが0になるとゲームオーバーパネルが表示される
         {
             
