@@ -36,26 +36,23 @@ public class ResultScore : MonoBehaviour
         {
             score+=50;
             resultscore_text.text= "Score:" + score;
-            Debug.Log("スコア加算");
            
         }
         else if (TotalPoint == 0)
         {
             score = 0;
             resultscore_text.text = "Score:0";
-            Debug.Log("スコアは0");
         }
        
         if (maxcombo > combo)
         {
             combo++;
-            maxcombo_text.text = "Combo:" + combo;
+            maxcombo_text.text = "MaxCombo:" + combo;
         }
         else if(maxcombo == 0)
         {
             combo = 0;
-            maxcombo_text.text = "Combo:0";
-            Debug.Log("コンボは0");
+            maxcombo_text.text = "MaxCombo:0";
         }
 
     }
