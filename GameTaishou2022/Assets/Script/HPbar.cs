@@ -71,15 +71,15 @@ public class HPbar : MonoBehaviour
         //{
         //    Debug.Log("trueのまま");
         //}
-        if (Input.GetKeyDown(KeyCode.Return)) //エンターキーを押したら10ダメージ受ける(デバッグ用)
-        {
+        //if (Input.GetKeyDown(KeyCode.Return)) //エンターキーを押したら10ダメージ受ける(デバッグ用)
+        //{
 
-            slider.value = slider.value - damage;
-            Debug.Log("ダメージ");
+        //    slider.value = slider.value - damage;
+        //    Debug.Log("ダメージ");
 
-            //slider.value = (float)currentHp / (float)maxHp;
+        //    //slider.value = (float)currentHp / (float)maxHp;
 
-        }
+        //}
         if (gc<=0&&slider.value == 0 && dPoint<=1)//hpが0になるとゲームオーバーパネルが表示される
         {
             
@@ -91,7 +91,7 @@ public class HPbar : MonoBehaviour
            
 
         }
-        if (dPoint<=0&&step_time >=20.0f && gc < 1) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
+        if (dPoint<=0&&step_time >=105.0f && gc < 1) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
         {
             Debug.Log("ゲームクリア！");
             clearflg = true;

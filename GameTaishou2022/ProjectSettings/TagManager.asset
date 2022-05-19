@@ -68,3 +68,6 @@ TagManager:
   - name: notes
     uniqueID: 1169133697
     locked: 0
+  - name: Clear
+    uniqueID: 206295797
+    locked: 0

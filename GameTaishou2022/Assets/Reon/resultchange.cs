@@ -5,18 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class resultchange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public void result()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            SceneManager.LoadScene("GameOverScene");
-        }
+        SceneManager.LoadScene("GameOverScene");
     }
 }
+

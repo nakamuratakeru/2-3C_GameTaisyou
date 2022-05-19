@@ -37,6 +37,8 @@ public class NotesRod : MonoBehaviour
 
     public static int score;
     public static int combo;
+    public static int resultscore;
+    public static int resultcombo;
     public static int maxcombo;
     bool comboreset;
 
@@ -129,11 +131,14 @@ public class NotesRod : MonoBehaviour
             maxcombo = combo;
         }
 
-        if (GClearcanvas.clearflg == true)
-        {
-            score = 0;
-            combo = 0;
-        }
+        //if (HPbar.clearflg == true)
+        //{
+        //    resultscore = score;
+        //    resultcombo = maxcombo;
+        //    score = 0;
+        //    combo = 0;
+        //    maxcombo = 0;
+        //}
     }
 
     private void rotate()
@@ -288,7 +293,6 @@ public class NotesRod : MonoBehaviour
         if (Input.GetButtonDown("joystick button 2"))
         {
             Xflg = true;
-            X.GetComponent<Renderer>().material.color = Color.red;
             if (xnotes == true)
             {
                 Destroy(Xnotes.gameObject.transform.root.gameObject);
@@ -299,14 +303,12 @@ public class NotesRod : MonoBehaviour
         }
         else if (Input.GetButtonUp("joystick button 2"))
         {
-            X.GetComponent<Renderer>().material.color = Color.blue;
             Xflg = false;
         }
 
         if (Input.GetButtonDown("RB"))
         {
             Xflg = true;
-            X.GetComponent<Renderer>().material.color = Color.red;
             if (xnotes == true)
             {
                 Debug.Log("aaaaa");
@@ -318,15 +320,13 @@ public class NotesRod : MonoBehaviour
         }
         else if (Input.GetButtonUp("RB"))
         {
-            X.GetComponent<Renderer>().material.color = Color.blue;
             Xflg = false;
         }
 
         if (Input.GetButtonDown("joystick button 1"))
         {
             Bflg = true;
-      
-            B.GetComponent<Renderer>().material.color = Color.red;
+    
             if (bnotes == true)
             {
                 
@@ -339,14 +339,12 @@ public class NotesRod : MonoBehaviour
         }
         else if (Input.GetButtonUp("joystick button 1"))
         {
-            B.GetComponent<Renderer>().material.color = Color.blue;
             Bflg = false;
         }
 
         if (Xyoko<0&&Xyokobefor==0.0f)
         {
                 Bflg = true;
-                B.GetComponent<Renderer>().material.color = Color.red;
                 if (bnotes == true)
                 {
 
@@ -360,14 +358,12 @@ public class NotesRod : MonoBehaviour
         }
         else if (Xyoko==0)
         {
-            B.GetComponent<Renderer>().material.color = Color.blue;
             Bflg = false;
         }
 
         if (Input.GetButtonDown("joystick button 0"))
         {
             Aflg = true;
-            A.GetComponent<Renderer>().material.color = Color.red;
             if (anotes == true)
             {
                 
@@ -380,14 +376,12 @@ public class NotesRod : MonoBehaviour
         }
         else if (Input.GetButtonUp("joystick button 0"))
         {
-            A.GetComponent<Renderer>().material.color = Color.blue;
             Aflg = false;
         }
 
         if (Xtate==-1&&Xtatebefor==0)
         {
             Aflg = true;
-            A.GetComponent<Renderer>().material.color = Color.red;
             if (anotes == true)
             {
                 
@@ -401,7 +395,6 @@ public class NotesRod : MonoBehaviour
         }
         else if (Xtate==0)
         {
-            A.GetComponent<Renderer>().material.color = Color.blue;
             Aflg = false;
         }
 

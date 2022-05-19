@@ -8,7 +8,7 @@ public class ButtonSelect2: MonoBehaviour
     Button button;
     void OnEnable()
     {
-        button = GameObject.Find("GameOverCanvas/Panel/TitleButton").GetComponent<Button>();
+        button = GameObject.Find("GameOverCanvas/Panel/Result").GetComponent<Button>();
         //ボタンが選択された状態になる
         button.Select();
 
