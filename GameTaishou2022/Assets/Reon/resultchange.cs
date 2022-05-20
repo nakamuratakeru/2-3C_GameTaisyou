@@ -8,7 +8,7 @@ public class resultchange : MonoBehaviour
     
     public void result()
     {
-        SceneManager.LoadScene("GameOverScene");
+        SceneManager.LoadScene("GameOverScene");//リザルト画面に移行
     }
 }
 
