@@ -590,7 +590,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sound
       value: 
-      objectReference: {fileID: 8300000, guid: 02d95a3cc70593243992c8273bd73957, type: 3}
+      objectReference: {fileID: 8300000, guid: 71d5f66e21977cd4c8c6f6a85ed274d8, type: 3}
     - target: {fileID: 7279371133281360867, guid: 19a57594c8c6d3c4e96881f8929f7bb7,
         type: 3}
       propertyPath: sound2
@@ -1059,6 +1059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137576023568929797, guid: 3e7ccabad868ab44a9e3d83e7a1cd270,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7137576023568929798, guid: 3e7ccabad868ab44a9e3d83e7a1cd270,
         type: 3}

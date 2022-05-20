@@ -9,11 +9,11 @@ public class HPbar : MonoBehaviour
 
     public int maxHp = 100;
     [SerializeField] GameObject GameclearCanvas;　//ゲームクリア時に表示されるクリアパネルを入れる
-    [SerializeField] GameObject overPanel;
+    [SerializeField] GameObject overPanel; //ゲームオーバー時に表示されるゲームオーバーパネルを入れる。
     private float step_time; //ゲームプレイ中の経過時間をカウントする
-    //public int currentHp;
-    Slider slider;
-    public static  int dPoint = 0;
+    
+    Slider slider;　//HPのスライダー定義
+    public static  int dPoint = 0;　
     public static  int gc = 0;
     public static int rf = 0; //リセットフラグをfalseにする処理が複数起こるのを防ぐ為作成した関数
     public static bool clearflg = false;
