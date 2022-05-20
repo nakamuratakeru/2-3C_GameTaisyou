@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 185891322}
   - component: {fileID: 185891324}
   m_Layer: 5
-  m_Name: ookamisetsumei
+  m_Name: sabosetsumei
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,14 +149,14 @@ RectTransform:
   m_GameObject: {fileID: 185891320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 490422528}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97, y: -90}
+  m_AnchoredPosition: {x: -86, y: -90}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &185891322
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30FB\u304A\u304A\u304B\u307F\n\u771F\u3093\u4E2D\u306E\u30CE\u30FC\u30C4\u306E\u4F4D\u7F6E\u3092\u901A\u308B\u6575\u3002\nB\u30DC\u30BF\u30F3\u3092\u62BC\u3059\u3068\u5012\u305B\u308B\u3002"
+  m_Text: "\u30FB\u30B5\u30DC\u30C6\u30F3\n\u771F\u3093\u4E2D\u306E\u30CE\u30FC\u30C4\u306E\u4F4D\u7F6E\u3092\u901A\u308B\u6575\u3002\nB\u30DC\u30BF\u30F3\u3092\u62BC\u3059\u3068\u5012\u305B\u308B\u3002"
 --- !u!222 &185891323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -242,14 +242,14 @@ RectTransform:
   m_GameObject: {fileID: 380720752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 490422528}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 264, y: -90}
+  m_AnchoredPosition: {x: 290, y: -90}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380720754
@@ -882,8 +882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124, y: -100}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 147, y: -113}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122211472
 MonoBehaviour:
@@ -903,8 +903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7282886668606283007, guid: fe21b637178296d4fbdfe2e84c9e4bf3,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e2f4fadcde91f040a78e651ac3734a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -934,7 +933,7 @@ GameObject:
   - component: {fileID: 1137121896}
   - component: {fileID: 1137121895}
   m_Layer: 5
-  m_Name: honeimage
+  m_Name: toriimage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -949,14 +948,14 @@ RectTransform:
   m_GameObject: {fileID: 1137121893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 490422528}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 30}
+  m_AnchoredPosition: {x: -95, y: 25}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137121895
@@ -977,8 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8690888172456113539, guid: 91ecf3cbbb834eb4fa3a7bbb976123b2,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1d2a66e687257445b7332d13403eaff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1009,7 +1007,7 @@ GameObject:
   - component: {fileID: 1194829733}
   - component: {fileID: 1194829735}
   m_Layer: 5
-  m_Name: honesetsumei
+  m_Name: torisetsumei
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,14 +1022,14 @@ RectTransform:
   m_GameObject: {fileID: 1194829731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 490422528}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68, y: 40}
+  m_AnchoredPosition: {x: 70, y: 40}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194829733
@@ -1065,7 +1063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30FB\u304C\u3044\u3053\u3064\n\u4E00\u756A\u4E0A\u306E\u30CE\u30FC\u30C4\u306E\u4F4D\u7F6E\u3092\u901A\u308B\u6575\u3002\nX\u30DC\u30BF\u30F3\u3092\u62BC\u3059\u3068\u5012\u305B\u308B\u3002"
+  m_Text: "\u30FB\u3068\u308A\n\u4E00\u756A\u4E0A\u306E\u30CE\u30FC\u30C4\u306E\u4F4D\u7F6E\u3092\u901A\u308B\u6575\u3002\nX\u30DC\u30BF\u30F3\u3092\u62BC\u3059\u3068\u5012\u305B\u308B\u3002"
 --- !u!222 &1194829734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1657,7 +1655,7 @@ GameObject:
   - component: {fileID: 1991792639}
   - component: {fileID: 1991792638}
   m_Layer: 5
-  m_Name: ookamiimage
+  m_Name: soboimage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1700,8 +1698,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8027088612622946780, guid: a16092940f13f0c448b033b1a360fe36,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb809831d4b92f34b870aab094586c11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1754,7 +1751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -200}
+  m_AnchoredPosition: {x: -75, y: -234}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050960594
