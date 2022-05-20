@@ -11,11 +11,11 @@ public class cursorselectmenu : MonoBehaviour
     public int i = 0;
 
 
-    private AudioSource audio;
+    private AudioSource audio; 
 
     [SerializeField]
-    public AudioClip sound;
-    public AudioClip sound2;
+    public AudioClip sound; //ボタン決定音を入れる関数
+    public AudioClip sound2;//カーソル決定音を入れる
 
     
     //スタート関数
@@ -50,12 +50,12 @@ public class cursorselectmenu : MonoBehaviour
             audio.PlayOneShot(sound);
             SceneManager.LoadScene("SampleScene");
             Debug.Log("ゲームへ");
-            if (Title.resetflg == true)
+            if (Title.resetflg == true)//resetflgがtrueなら
             {
-                NotesRod.score = 0;
-                NotesRod.combo = 0;
-                NotesRod.maxcombo = 0;
-                //StartCoroutine("GameStart");
+                NotesRod.score = 0;//scoreの数を0にする
+                NotesRod.combo = 0;//comboの数を0にする
+                NotesRod.maxcombo = 0;//maxcomboの数を0にする
+               
                 
             }
            

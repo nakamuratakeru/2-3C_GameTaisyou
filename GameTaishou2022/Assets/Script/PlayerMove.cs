@@ -27,27 +27,24 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown("joystick button 0")){ //Aボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
-            Debug.Log("Aで攻撃！");
+            
         }
 
    
         if (Input.GetKeyDown("joystick button 1")){　//Bボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
-            Debug.Log("Bで攻撃！");
+           
         }
         if (Input.GetKeyDown("joystick button 2")){　//Xボタンを押すと魔法の杖のアニメーションが流れる
             animator.SetTrigger("magic");
-            Debug.Log("Xで攻撃！");
+           
         }
         if (Input.GetKeyDown("joystick button 5"))
         {　//RBボタンを押すと魔法の杖のアニメーションが流れる
             animator.SetTrigger("magic");
-            Debug.Log("RB(X)で攻撃！");
+            
         }
-        //if (Input.GetKeyDown("joystick button 3")){　//Yボタンを押すと魔法の杖のアニメーションが流れる
-        //    animator.SetTrigger("magic");
-        //    Debug.Log("Yで攻撃！");
-        //}
+       
 
 
 
@@ -62,7 +59,7 @@ public class PlayerMove : MonoBehaviour
         if (Xtate_new == -1 && Xtate_old == 0)
         { //Aボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
-            Debug.Log("下キー(A)で攻撃！");
+            
            
            
         }
@@ -70,10 +67,10 @@ public class PlayerMove : MonoBehaviour
         if (Xyoko_new == -1 && Xyoko_old == 0)
         {　//Bボタンを押すと剣のアニメーションが流れる
             animator.SetTrigger("sword");
-            Debug.Log("左キー(B)で攻撃！");
+           
           
         }
-        // Xtate == -1
+        
         Xtate_old = Xtate_new;
         Xyoko_old = Xyoko_new;
     }
