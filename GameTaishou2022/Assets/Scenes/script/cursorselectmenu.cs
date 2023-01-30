@@ -48,17 +48,8 @@ public class cursorselectmenu : MonoBehaviour
             //ゲームシーンへ移動
           
             audio.PlayOneShot(sound);
-            SceneManager.LoadScene("SampleScene");
-            Debug.Log("ゲームへ");
-            if (Title.resetflg == true)//resetflgがtrueなら
-            {
-                NotesRod.score = 0;//scoreの数を0にする
-                NotesRod.combo = 0;//comboの数を0にする
-                NotesRod.maxcombo = 0;//maxcomboの数を0にする
-               
-                
-            }
-           
+            StartCoroutine("StageSelect");
+
 
         }
         else if (Input.GetKeyDown("joystick button 0") && Iz == 1)
@@ -79,14 +70,14 @@ public class cursorselectmenu : MonoBehaviour
 
     }
 
-    //IEnumerator GameStart()
-    //{
+    IEnumerator StageSelect()
+    {
 
 
-    //    yield return new WaitForSecondsRealtime(0.5f);
-    //    SceneManager.LoadScene("SampleScene");
+        yield return new WaitForSecondsRealtime(0.5f);
+        SceneManager.LoadScene("Stage001");
 
-    //}
+    }
     IEnumerator Asobikata()
     {
 

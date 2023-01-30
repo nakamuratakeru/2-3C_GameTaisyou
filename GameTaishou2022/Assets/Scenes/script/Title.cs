@@ -16,6 +16,16 @@ public class Title : MonoBehaviour
     void Start()
     {
         resetflg = true;　//タイトル画面に移るとresetflgをtrueにする
+        if (StageSentaku.S1flag == true)
+        {
+            Debug.Log("S1フラグfalse");
+            StageSentaku.S1flag = false;
+        }
+        if (StageSentaku.S2flag == true) {
+            Debug.Log("S2フラグfalse");
+            StageSentaku.S2flag = false;
+        }
+        
         //DontDestroyOnLoad(gameObject);
         audio2 = gameObject.AddComponent<AudioSource>();
     }
