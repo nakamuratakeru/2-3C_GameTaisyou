@@ -75,14 +75,14 @@ public class HPbar : MonoBehaviour
            
 
         }
-        if (dPoint <= 0 && step_time >= 105.0f && gc < 1 && StageSentaku.S1flag == true) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
+        if (dPoint <= 0 && step_time >= 108.0f && gc < 1 && StageSentaku.S1flag == true) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
         {
             Debug.Log("ゲームクリア！");
             clearflg = true;
             GameclearCanvas.SetActive(true);
             gc += 1;
         }
-        else if (dPoint <= 0 && step_time >= 120.0f && gc < 1 && StageSentaku.S2flag == true) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
+        else if (dPoint <= 0 && step_time >= 126.0f && gc < 1 && StageSentaku.S2flag == true) //プレイ開始から105秒経過するとゲームクリアパネルが表示される。
         {
             Debug.Log("ゲームクリア！");
             clearflg = true;

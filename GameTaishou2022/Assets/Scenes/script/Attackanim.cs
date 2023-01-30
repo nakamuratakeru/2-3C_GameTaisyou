@@ -9,6 +9,7 @@ public class Attackanim : MonoBehaviour
     float Xyoko_old;
     Animator animator;
     private AudioSource audio;
+   
 
     [SerializeField]
     public AudioClip sound;
@@ -50,6 +51,14 @@ public class Attackanim : MonoBehaviour
         {　//RBボタンを押すと魔法の杖のアニメーションが流れる
             animator.SetTrigger("XBomb");
             audio.PlayOneShot(sound2);
+        }
+
+        if (enemydamage.atk == true)
+        {
+            animator.SetTrigger("damage");
+            Debug.Log("プレイヤーにダメージ！");
+            
+
         }
 
         float Xyoko_new = Input.GetAxisRaw("LT");
