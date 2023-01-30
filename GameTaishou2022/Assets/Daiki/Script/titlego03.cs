@@ -18,10 +18,6 @@ public class titlego03 : MonoBehaviour
     }
     void Update()
     {
-        //if (Input.GetKeyDown("joystick button 1"))
-        //{
-        //    Debug.Log("button1");
-        //}
         
         if (Input.GetKeyDown("joystick button 0"))
         {

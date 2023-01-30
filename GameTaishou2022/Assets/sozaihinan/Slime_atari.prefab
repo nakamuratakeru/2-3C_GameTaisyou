@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePoint: 5
+  sound: {fileID: 8300000, guid: 73b7d862ffb1beb45bc2ac3555a6d3b4, type: 3}
 --- !u!1001 &6182696307969201660
 PrefabInstance:
   m_ObjectHideFlags: 0

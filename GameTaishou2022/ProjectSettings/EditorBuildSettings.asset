@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/FadeSceneS/StageSelect.unity
     guid: 82f423c373426384289109d028730c33
   - enabled: 1
+    path: Assets/Daiki/stage1_fade.unity
+    guid: 0853d2d90dc1d93419fc02ae0380c124
+  - enabled: 1
+    path: Assets/Daiki/stage2_fade.unity
+    guid: 66f751676c6fb3c4c932c0bf43079a96
+  - enabled: 1
     path: Assets/Scenes/FadeSceneS/EyeCatching.unity
     guid: 6dddd400270a8c34198f646c7d76cffa
   - enabled: 1
