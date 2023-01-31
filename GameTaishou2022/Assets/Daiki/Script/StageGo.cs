@@ -27,5 +27,9 @@ public class StageGo : MonoBehaviour
         {
             SceneManager.LoadScene("NewSong");
         }
+        if (go_time >= 6.0f && StageSentaku.S3flag)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
     }
 }

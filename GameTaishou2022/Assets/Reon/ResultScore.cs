@@ -34,7 +34,7 @@ public class ResultScore : MonoBehaviour
 
         if (TotalPoint > score)
         {
-            score+=50;
+            score+=100;
             resultscore_text.text= "Score:" + score;
            
         }

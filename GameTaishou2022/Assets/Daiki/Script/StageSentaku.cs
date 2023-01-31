@@ -17,6 +17,7 @@ public class StageSentaku : MonoBehaviour
     public int i = 0;
     public static bool S1flag= false;
     public static bool S2flag = false;
+    public static bool S3flag = false;
     private AudioSource audio;
 
     [SerializeField]
@@ -74,7 +75,17 @@ public class StageSentaku : MonoBehaviour
             StartCoroutine("Stage2Go");
 
         }
+
         else if (Input.GetKeyDown("joystick button 0") && Iz == 2)
+        {
+
+            //ゲームシーンへ移動
+
+            audio.PlayOneShot(sound);
+            StartCoroutine("Stage3Go");
+
+        }
+        else if (Input.GetKeyDown("joystick button 2"))
         {
 
             audio.PlayOneShot(sound);
@@ -122,6 +133,23 @@ public class StageSentaku : MonoBehaviour
         }
     }
 
+    IEnumerator Stage3Go()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        //ゲームシーンへ移動
+        S3flag = true;
+        SceneManager.LoadScene("stage3_fade");
+
+        Debug.Log("ステージ3へ");
+        if (Title.resetflg == true)//resetflgがtrueなら
+        {
+            NotesRod.score = 0;//scoreの数を0にする
+            NotesRod.combo = 0;//comboの数を0にする
+            NotesRod.maxcombo = 0;//maxcomboの数を0にする
+            Debug.Log("スコア・コンボ・最大コンボ数リセット");
+
+        }
+    }
     IEnumerator Titlego()
     {
         yield return new WaitForSecondsRealtime(0.5f);

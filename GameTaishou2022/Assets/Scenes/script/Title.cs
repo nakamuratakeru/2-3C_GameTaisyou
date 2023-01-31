@@ -25,7 +25,12 @@ public class Title : MonoBehaviour
             Debug.Log("S2フラグfalse");
             StageSentaku.S2flag = false;
         }
-        
+        if (StageSentaku.S3flag == true)
+        {
+            Debug.Log("S3フラグfalse");
+            StageSentaku.S3flag = false;
+        }
+
         //DontDestroyOnLoad(gameObject);
         audio2 = gameObject.AddComponent<AudioSource>();
     }
